@@ -1,0 +1,12 @@
+Uses pretrained ResNet50 model
+Implements data augmentation (flips, rotations, color jitter)
+Saves the best model based on validation accuracy
+Creates training history plots
+Uses GPU if available
+Implements proper train/validation split
+The script will:
+
+Load and preprocess your data
+Train the model for 10 epochs
+Save the best model as 'best_model.pth'
+Generate a training history plot as 'training_history.png'

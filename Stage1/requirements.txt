@@ -1,0 +1,9 @@
+Run the following
+
+pip install torch torchvision pandas scikit-learn matplotlib tqdm
+
+To start virtual environment:
+.venv\Scripts\Activate.ps1
+
+To stop virtual environment:
+deactivate
