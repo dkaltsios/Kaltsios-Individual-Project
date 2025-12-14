@@ -48,7 +48,7 @@ env/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
+
 
 # IDE
 .vscode/
@@ -73,4 +73,8 @@ wandb/
 Stage1/all_imgs/
 Stage1/MalignImages/
 Stage1/NEVSEKimages/
+
+Dataset/MIDAS-Dataset
+Dataset/PAD-UFES-20
+
 
