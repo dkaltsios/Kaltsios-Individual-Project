@@ -1,0 +1,56 @@
+{
+  "task": "binary_classification",
+  "label": "y",
+  "image_column_stage1": "image_path",
+  "id_columns": [
+    "sample_id",
+    "dataset_id",
+    "patient_global"
+  ],
+  "patient_id": "patient_global",
+  "stage2_features": [
+    "age",
+    "sex",
+    "fitzpatrick",
+    "lesion_size_mm",
+    "diameter_2",
+    "anatomical_site_clean",
+    "bleed",
+    "hurt",
+    "itch",
+    "changed",
+    "grew",
+    "elevation",
+    "smoking",
+    "alcohol_consumption",
+    "cancer_history",
+    "skin_cancer_history",
+    "pesticide",
+    "has_piped_water",
+    "has_sewage_system"
+  ],
+  "excluded_columns": [
+    "clinical_impression",
+    "clinical_impression_2",
+    "clinical_impression_3",
+    "cli_impres_group",
+    "cli_impres_2_group",
+    "cli_impres_3_group",
+    "melanoma_flag",
+    "pathology_report",
+    "biopsed",
+    "background_father",
+    "background_mother",
+    "race",
+    "race_group",
+    "distance",
+    "distance_group",
+    "is_control",
+    "diagnosis"
+  ],
+  "source_input": "combined_dataset_standardised.csv",
+  "generated_files": {
+    "stage1_csv": "combined_stage1.csv",
+    "stage2_csv": "combined_stage2.csv"
+  }
+}

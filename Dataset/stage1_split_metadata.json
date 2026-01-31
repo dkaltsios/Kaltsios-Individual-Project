@@ -1,0 +1,18 @@
+{
+  "seed": 42,
+  "split": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "source_csv": "/Users/dimitriskaltsios/University/Individual/Kaltsios-Individual-Project/Dataset/combined_stage1.csv",
+  "image_col": "image_path",
+  "counts": {
+    "train_samples": 3977,
+    "val_samples": 853,
+    "test_samples": 818,
+    "train_patients": 1469,
+    "val_patients": 315,
+    "test_patients": 315
+  }
+}

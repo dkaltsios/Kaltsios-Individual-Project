@@ -1,6 +1,5 @@
-Run the following
 
-pip install torch torchvision pandas scikit-learn matplotlib tqdm
+pip install torch torchvision pandas scikit-learn matplotlib tqdm pyyaml
 
 To start virtual environment:
 .venv\Scripts\Activate.ps1
