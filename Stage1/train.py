@@ -18,7 +18,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from Stage1.data.dataset import SkinLesionDataset
-from Stage1.models.efficientnet import build_efficientnet_b0
+from Stage1.models import build_model
 
 
 def set_seed(seed: int) -> None:
@@ -133,7 +133,12 @@ def main():
         pin_memory=False,
     )
 
-    model = build_efficientnet_b0(num_classes=1, pretrained=cfg["model"].get("pretrained", True))
+    model_name = cfg["model"].get("name", "efficientnet_b0")
+    model = build_model(
+        model_name,
+        num_classes=1,
+        pretrained=cfg["model"].get("pretrained", True),
+    )
     model.to(device)
 
     # Class imbalance handling
