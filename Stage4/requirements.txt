@@ -1,0 +1,8 @@
+numpy
+pandas
+Pillow
+scikit-learn
+scikit-image>=0.19
+xgboost
+joblib
+PyYAML

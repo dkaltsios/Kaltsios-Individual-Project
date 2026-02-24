@@ -1,0 +1,854 @@
+sample_id,y,dataset_id,patient_global,age,sex,fitzpatrick,lesion_size_mm,diameter_2,anatomical_site_clean,bleed,hurt,itch,changed,grew,elevation,smoking,alcohol_consumption,cancer_history,skin_cancer_history,pesticide,has_piped_water,has_sewage_system,subtype,y_class
+A_A_PAT_1516_0,0.0,A,A_PAT_1516,8,unknown,0,-1.0,-1.0,arm,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_359_29,1.0,A,A_PAT_359,54,female,3,10.0,10.0,forearm,false,false,false,false,false,false,false,false,true,true,false,true,true,ak,0
+A_A_PAT_79_33,1.0,A,A_PAT_79,63,female,2,7.0,5.0,face,false,false,false,false,false,false,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_1431_38,1.0,A,A_PAT_1431,58,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_265_45,1.0,A,A_PAT_265,44,male,2,11.0,9.0,back,false,false,true,false,false,true,false,false,false,true,true,false,false,bcc,1
+A_A_PAT_1074_46,1.0,A,A_PAT_1074,45,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_289_47,1.0,A,A_PAT_289,56,male,2,6.0,4.0,forearm,false,false,true,false,false,false,true,false,true,false,true,false,false,ak,0
+A_A_PAT_2020_50,1.0,A,A_PAT_2020,74,unknown,0,-1.0,-1.0,hand,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_544_65,0.0,A,A_PAT_544,87,female,2,5.0,4.0,face,false,false,false,false,true,true,false,false,false,false,false,false,false,seborrheic_keratosis,6
+A_A_PAT_814_67,1.0,A,A_PAT_814,63,male,2,40.0,20.0,chest,true,true,true,false,true,true,false,true,true,false,true,true,true,bcc,1
+A_A_PAT_1014_68,1.0,A,A_PAT_1014,41,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_838_71,1.0,A,A_PAT_838,53,female,3,18.0,10.0,neck,false,false,false,false,false,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_1255_72,1.0,A,A_PAT_1255,60,unknown,0,-1.0,-1.0,arm,false,false,false,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_701_73,0.0,A,A_PAT_701,69,male,2,10.0,5.0,face,false,false,false,false,false,true,false,true,false,true,false,true,true,seborrheic_keratosis,6
+A_A_PAT_1725_84,1.0,A,A_PAT_1725,47,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_981_92,1.0,A,A_PAT_981,67,female,3,3.0,3.0,nose,false,false,false,unk,unk,false,true,false,false,false,true,true,true,bcc,1
+A_A_PAT_419_96,1.0,A,A_PAT_419,80,female,2,12.0,10.0,forearm,true,true,true,false,false,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_1423_97,1.0,A,A_PAT_1423,56,unknown,0,-1.0,-1.0,face,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_962_105,1.0,A,A_PAT_962,52,male,3,3.0,3.0,face,false,true,true,false,true,true,false,false,true,true,true,false,false,bcc,1
+A_A_PAT_966_112,1.0,A,A_PAT_966,46,female,3,12.0,5.0,face,false,false,true,true,true,false,false,false,false,false,false,false,false,melanoma,3
+A_A_PAT_847_121,1.0,A,A_PAT_847,60,male,2,15.0,10.0,back,false,true,false,false,false,false,false,false,true,false,true,true,true,bcc,1
+A_A_PAT_1552_138,1.0,A,A_PAT_1552,54,unknown,0,-1.0,-1.0,face,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_771_142,1.0,A,A_PAT_771,69,male,3,7.0,7.0,arm,false,false,true,true,true,true,true,true,true,false,false,true,true,scc,5
+A_A_PAT_63_145,1.0,A,A_PAT_63,36,female,2,15.0,10.0,chest,true,true,true,false,true,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_330_153,1.0,A,A_PAT_330,71,male,2,15.0,14.0,chest,false,true,true,false,false,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_966_164,1.0,A,A_PAT_966,46,female,3,12.0,5.0,face,false,false,true,true,true,false,false,false,false,false,false,false,false,melanoma,3
+A_A_PAT_396_165,1.0,A,A_PAT_396,76,female,2,7.0,6.0,face,false,false,false,false,true,true,false,true,false,false,false,false,false,bcc,1
+A_A_PAT_2042_167,0.0,A,A_PAT_2042,54,unknown,0,-1.0,-1.0,chest,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_1794_175,1.0,A,A_PAT_1794,67,unknown,0,-1.0,-1.0,face,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_267_177,1.0,A,A_PAT_267,79,male,2,17.0,12.0,face,false,false,true,false,true,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_395_178,1.0,A,A_PAT_395,58,female,3,15.0,12.0,thigh,true,false,true,unk,unk,true,false,false,true,false,true,false,false,scc,5
+A_A_PAT_306_180,1.0,A,A_PAT_306,87,male,2,10.0,10.0,forearm,true,false,true,false,false,true,false,false,false,false,true,true,true,ak,0
+A_A_PAT_458_183,1.0,A,A_PAT_458,80,male,1,6.0,6.0,face,false,false,false,false,true,true,false,true,false,true,false,false,false,bcc,1
+A_A_PAT_82_191,1.0,A,A_PAT_82,71,male,2,15.0,13.0,arm,true,true,true,false,true,true,false,false,true,false,true,false,false,bcc,1
+A_A_PAT_1955_198,1.0,A,A_PAT_1955,58,unknown,0,-1.0,-1.0,face,false,false,true,true,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_359_228,1.0,A,A_PAT_359,53,female,3,5.0,4.0,face,false,false,false,false,false,true,false,false,true,true,false,true,true,bcc,1
+A_A_PAT_730_237,1.0,A,A_PAT_730,51,male,3,7.0,5.0,nose,false,false,false,unk,unk,true,false,true,false,true,true,true,true,bcc,1
+A_A_PAT_962_239,1.0,A,A_PAT_962,52,male,3,3.0,3.0,face,false,true,true,false,true,true,false,false,true,true,true,false,false,bcc,1
+A_A_PAT_1481_245,1.0,A,A_PAT_1481,60,unknown,0,-1.0,-1.0,face,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_827_248,1.0,A,A_PAT_827,67,male,2,15.0,11.0,arm,true,false,true,unk,unk,true,true,false,false,false,false,true,true,bcc,1
+A_A_PAT_535_263,1.0,A,A_PAT_535,56,female,1,12.0,7.0,forearm,false,false,true,unk,unk,true,false,false,true,true,false,true,true,bcc,1
+A_A_PAT_121_265,1.0,A,A_PAT_121,68,female,2,8.0,6.0,chest,true,true,false,false,true,true,false,false,true,false,false,true,false,bcc,1
+A_A_PAT_524_267,1.0,A,A_PAT_524,50,male,2,8.0,7.0,back,false,false,true,unk,unk,true,false,false,false,true,true,false,false,bcc,1
+A_A_PAT_1774_269,1.0,A,A_PAT_1774,67,unknown,0,-1.0,-1.0,face,false,false,true,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_79_271,1.0,A,A_PAT_79,63,female,2,7.0,5.0,face,false,false,false,false,false,false,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_364_275,1.0,A,A_PAT_364,66,female,2,20.0,16.0,back,true,true,true,false,false,true,true,false,false,true,false,false,false,bcc,1
+A_A_PAT_952_277,1.0,A,A_PAT_952,57,male,2,5.0,5.0,chest,false,false,false,unk,unk,true,true,false,false,false,true,true,true,bcc,1
+A_A_PAT_315_283,1.0,A,A_PAT_315,22,female,3,6.0,3.0,chest,true,false,true,false,false,true,false,false,false,true,true,false,false,bcc,1
+A_A_PAT_1392_320,1.0,A,A_PAT_1392,68,unknown,0,-1.0,-1.0,neck,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1057_323,1.0,A,A_PAT_1057,47,unknown,0,-1.0,-1.0,face,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_259_326,1.0,A,A_PAT_259,92,female,1,5.0,3.0,nose,false,false,true,false,true,true,false,false,true,false,false,false,false,scc,5
+A_A_PAT_838_327,1.0,A,A_PAT_838,53,female,3,5.0,9.0,neck,false,false,true,unk,unk,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_738_328,1.0,A,A_PAT_738,58,female,2,3.0,3.0,face,true,false,false,false,false,true,false,false,true,true,true,false,true,bcc,1
+A_A_PAT_286_332,1.0,A,A_PAT_286,55,female,2,5.0,5.0,arm,false,false,true,false,false,false,false,false,false,true,true,false,false,ak,0
+A_A_PAT_349_334,1.0,A,A_PAT_349,79,female,2,20.0,14.0,arm,true,false,true,unk,unk,false,false,false,false,false,false,true,true,scc,5
+A_A_PAT_895_338,1.0,A,A_PAT_895,65,female,2,15.0,10.0,arm,false,false,false,unk,unk,false,false,false,false,false,false,false,false,melanoma,3
+A_A_PAT_1729_351,1.0,A,A_PAT_1729,69,unknown,0,-1.0,-1.0,ear,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1945_357,0.0,A,A_PAT_1945,56,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_1393_364,1.0,A,A_PAT_1393,65,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_923_367,1.0,A,A_PAT_923,66,female,2,15.0,15.0,nose,true,false,false,true,true,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_771_372,1.0,A,A_PAT_771,69,male,3,6.0,3.0,face,false,false,true,unk,unk,true,true,true,true,false,false,true,true,bcc,1
+A_A_PAT_2009_374,1.0,A,A_PAT_2009,80,unknown,0,-1.0,-1.0,neck,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_330_390,1.0,A,A_PAT_330,72,male,2,9.0,4.0,ear,true,false,true,true,true,false,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_255_402,1.0,A,A_PAT_255,68,male,2,11.0,8.0,forearm,true,false,true,false,true,true,false,false,true,false,true,false,false,bcc,1
+A_A_PAT_981_410,1.0,A,A_PAT_981,67,female,3,3.0,3.0,nose,false,false,false,unk,unk,false,true,false,false,false,true,true,true,bcc,1
+A_A_PAT_1393_424,0.0,A,A_PAT_1393,65,unknown,0,-1.0,-1.0,back,false,false,false,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_408_427,1.0,A,A_PAT_408,62,male,2,8.0,7.0,forearm,false,false,false,false,false,true,false,true,false,true,true,true,true,ak,0
+A_A_PAT_82_432,1.0,A,A_PAT_82,71,male,2,15.0,13.0,arm,true,true,true,false,true,true,false,false,true,false,true,false,false,bcc,1
+A_A_PAT_286_435,0.0,A,A_PAT_286,55,female,2,5.0,5.0,back,false,false,false,false,false,true,false,false,false,true,true,false,false,nevus,4
+A_A_PAT_827_442,1.0,A,A_PAT_827,67,male,2,21.0,13.0,forearm,false,false,true,unk,unk,true,true,false,false,false,false,true,true,bcc,1
+A_A_PAT_1074_445,1.0,A,A_PAT_1074,45,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_503_446,1.0,A,A_PAT_503,88,male,2,9.0,7.0,face,true,false,true,false,false,true,false,true,true,true,true,true,true,scc,5
+A_A_PAT_652_456,1.0,A,A_PAT_652,59,male,2,1.0,1.0,back,true,true,true,unk,unk,false,false,true,true,false,true,true,true,bcc,1
+A_A_PAT_2061_459,1.0,A,A_PAT_2061,69,unknown,0,-1.0,-1.0,face,false,false,true,true,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_677_477,1.0,A,A_PAT_677,75,male,2,11.0,7.0,forearm,false,false,false,true,true,true,false,false,true,false,true,true,true,scc,5
+A_A_PAT_289_488,1.0,A,A_PAT_289,56,male,2,6.0,4.0,nose,false,true,false,false,false,false,true,false,true,false,true,false,false,ak,0
+A_A_PAT_63_496,1.0,A,A_PAT_63,35,female,2,11.0,7.0,face,false,false,false,false,false,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_194_501,0.0,A,A_PAT_194,63,female,4,6.0,4.0,neck,false,false,false,true,true,false,false,false,true,false,false,true,true,seborrheic_keratosis,6
+A_A_PAT_1265_502,1.0,A,A_PAT_1265,55,unknown,0,-1.0,-1.0,face,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1866_509,1.0,A,A_PAT_1866,77,unknown,0,-1.0,-1.0,face,false,true,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1369_525,1.0,A,A_PAT_1369,62,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1014_531,1.0,A,A_PAT_1014,41,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_872_532,1.0,A,A_PAT_872,71,female,2,20.0,10.0,ear,false,false,true,unk,unk,true,false,false,false,false,false,false,true,bcc,1
+A_A_PAT_1971_535,0.0,A,A_PAT_1971,76,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_822_536,1.0,A,A_PAT_822,72,male,3,13.0,10.0,face,false,false,true,false,true,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_708_551,1.0,A,A_PAT_708,70,male,2,15.0,10.0,back,false,false,true,unk,unk,true,false,true,true,false,false,true,true,bcc,1
+A_A_PAT_2065_554,0.0,A,A_PAT_2065,88,unknown,0,-1.0,-1.0,back,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_1565_560,1.0,A,A_PAT_1565,45,unknown,0,-1.0,-1.0,hand,false,false,true,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1904_561,0.0,A,A_PAT_1904,26,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_849_597,1.0,A,A_PAT_849,63,male,2,15.0,7.0,neck,true,false,false,true,true,true,false,false,true,false,true,true,true,bcc,1
+A_A_PAT_1369_609,1.0,A,A_PAT_1369,62,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1019_612,1.0,A,A_PAT_1019,48,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_49_613,1.0,A,A_PAT_49,69,male,3,20.0,13.0,forearm,true,false,true,unk,unk,false,false,false,false,false,false,true,true,scc,5
+A_A_PAT_349_632,1.0,A,A_PAT_349,79,female,2,20.0,14.0,arm,true,false,true,unk,unk,false,false,false,false,false,false,true,true,scc,5
+A_A_PAT_330_647,1.0,A,A_PAT_330,71,male,2,10.0,6.0,ear,false,false,false,false,false,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_1448_664,0.0,A,A_PAT_1448,23,unknown,0,-1.0,-1.0,back,false,false,true,true,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_911_665,1.0,A,A_PAT_911,55,male,2,8.0,6.0,neck,false,false,false,unk,unk,true,false,true,false,true,true,false,false,bcc,1
+A_A_PAT_856_668,1.0,A,A_PAT_856,51,male,3,10.0,9.0,chest,true,true,true,false,false,true,false,true,true,true,true,true,true,bcc,1
+A_A_PAT_923_680,1.0,A,A_PAT_923,66,female,2,15.0,15.0,nose,true,false,false,true,true,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_242_683,1.0,A,A_PAT_242,45,female,2,20.0,16.0,chest,false,false,false,unk,unk,true,true,true,true,true,false,true,true,bcc,1
+A_A_PAT_468_688,1.0,A,A_PAT_468,40,male,2,4.0,2.0,chest,true,true,true,false,true,true,false,true,false,true,false,true,false,bcc,1
+A_A_PAT_305_691,1.0,A,A_PAT_305,79,male,2,5.0,4.0,face,false,true,true,false,false,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_791_706,0.0,A,A_PAT_791,27,female,3,5.0,4.0,abdomen,false,false,false,unk,unk,false,false,false,true,false,false,true,true,nevus,4
+A_A_PAT_267_708,1.0,A,A_PAT_267,79,male,2,10.0,8.0,face,false,false,true,false,false,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_1314_709,0.0,A,A_PAT_1314,61,unknown,0,-1.0,-1.0,face,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_1403_717,1.0,A,A_PAT_1403,50,unknown,0,-1.0,-1.0,nose,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_286_731,0.0,A,A_PAT_286,55,female,2,5.0,5.0,back,false,false,false,false,false,true,false,false,false,true,true,false,false,nevus,4
+A_A_PAT_1074_744,1.0,A,A_PAT_1074,45,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_166_749,0.0,A,A_PAT_166,59,male,2,12.0,11.0,chest,false,false,false,false,true,false,false,true,true,false,false,false,false,seborrheic_keratosis,6
+A_A_PAT_1479_752,1.0,A,A_PAT_1479,39,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_677_755,1.0,A,A_PAT_677,75,male,2,11.0,7.0,forearm,false,false,false,true,true,true,false,false,true,false,true,true,true,scc,5
+A_A_PAT_771_761,1.0,A,A_PAT_771,69,male,3,10.0,9.0,hand,false,false,true,true,true,true,true,true,true,false,false,true,true,scc,5
+A_A_PAT_814_762,1.0,A,A_PAT_814,63,male,2,40.0,20.0,chest,true,true,true,false,true,true,false,true,true,false,true,true,true,bcc,1
+A_A_PAT_419_764,0.0,A,A_PAT_419,80,female,2,7.0,5.0,face,false,false,false,false,false,true,false,false,false,true,false,false,false,seborrheic_keratosis,6
+A_A_PAT_1690_777,1.0,A,A_PAT_1690,74,unknown,0,-1.0,-1.0,chest,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_528_783,1.0,A,A_PAT_528,75,female,2,10.0,8.0,arm,false,false,false,false,false,false,false,false,false,false,false,true,true,ak,0
+A_A_PAT_1392_785,0.0,A,A_PAT_1392,68,unknown,0,-1.0,-1.0,neck,false,false,false,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_184_787,1.0,A,A_PAT_184,71,male,3,5.0,3.0,arm,false,false,false,false,true,true,false,false,false,false,false,true,true,ak,0
+A_A_PAT_63_795,1.0,A,A_PAT_63,35,female,2,5.0,5.0,neck,true,true,true,false,true,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_138_796,1.0,A,A_PAT_138,61,male,2,19.0,8.0,face,true,true,true,unk,unk,true,true,true,false,false,false,false,false,bcc,1
+A_A_PAT_68_805,1.0,A,A_PAT_68,59,female,2,8.0,7.0,face,false,false,false,false,true,true,false,false,true,false,false,true,false,bcc,1
+A_A_PAT_154_808,1.0,A,A_PAT_154,78,male,3,9.0,7.0,arm,false,false,true,false,true,true,true,true,true,true,true,false,false,bcc,1
+A_A_PAT_63_812,1.0,A,A_PAT_63,35,female,2,5.0,5.0,neck,true,true,true,false,true,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_330_814,1.0,A,A_PAT_330,71,male,2,7.0,5.0,nose,false,false,false,false,false,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_1707_815,1.0,A,A_PAT_1707,75,unknown,0,-1.0,-1.0,chest,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_558_821,1.0,A,A_PAT_558,57,female,3,9.0,12.0,nose,true,true,true,false,true,true,false,false,true,false,true,true,true,bcc,1
+A_A_PAT_834_822,1.0,A,A_PAT_834,81,male,2,10.0,9.0,arm,false,false,false,false,false,false,false,false,true,true,false,true,false,ak,0
+A_A_PAT_1503_823,0.0,A,A_PAT_1503,41,unknown,0,-1.0,-1.0,back,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_122_828,1.0,A,A_PAT_122,79,female,1,14.0,10.0,neck,false,false,true,unk,unk,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_535_836,1.0,A,A_PAT_535,56,female,1,10.0,5.0,forearm,false,false,false,unk,unk,true,false,false,true,true,false,true,true,bcc,1
+A_A_PAT_246_842,1.0,A,A_PAT_246,33,male,2,11.0,10.0,arm,false,false,false,false,false,false,false,true,true,true,true,true,true,ak,0
+A_A_PAT_834_848,1.0,A,A_PAT_834,81,male,2,9.0,8.0,face,false,false,false,false,false,true,false,false,true,true,false,true,false,scc,5
+A_A_PAT_1406_853,1.0,A,A_PAT_1406,62,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_362_860,1.0,A,A_PAT_362,83,male,2,6.0,3.0,face,false,true,true,false,false,true,true,true,false,true,false,false,false,bcc,1
+A_A_PAT_966_865,1.0,A,A_PAT_966,46,female,3,32.0,30.0,forearm,false,false,true,false,false,false,false,false,false,false,false,false,false,ak,0
+A_A_PAT_1521_866,0.0,A,A_PAT_1521,43,unknown,0,-1.0,-1.0,face,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_67_873,1.0,A,A_PAT_67,37,male,5,18.0,14.0,face,true,true,true,false,true,true,false,true,true,false,true,true,true,bcc,1
+A_A_PAT_1022_880,1.0,A,A_PAT_1022,39,unknown,0,-1.0,-1.0,face,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_154_885,1.0,A,A_PAT_154,78,male,3,5.0,5.0,face,true,true,true,false,true,false,true,true,true,true,true,false,false,bcc,1
+A_A_PAT_1531_892,1.0,A,A_PAT_1531,64,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_2103_899,0.0,A,A_PAT_2103,18,unknown,0,-1.0,-1.0,thigh,false,false,true,true,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_370_910,1.0,A,A_PAT_370,62,male,3,11.0,8.0,forearm,true,false,true,false,false,false,true,true,true,true,true,false,false,ak,0
+A_A_PAT_255_926,1.0,A,A_PAT_255,68,male,2,11.0,8.0,forearm,true,false,true,false,true,true,false,false,true,false,true,false,false,bcc,1
+A_A_PAT_1944_931,0.0,A,A_PAT_1944,42,unknown,0,-1.0,-1.0,face,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_773_936,1.0,A,A_PAT_773,55,male,3,7.0,5.0,face,true,false,true,unk,unk,true,false,false,true,true,false,true,true,bcc,1
+A_A_PAT_827_941,1.0,A,A_PAT_827,67,male,2,20.0,15.0,hand,false,false,true,unk,unk,true,true,false,false,false,false,true,true,bcc,1
+A_A_PAT_771_951,1.0,A,A_PAT_771,69,male,3,7.0,7.0,arm,false,false,true,true,true,true,true,true,true,false,false,true,true,scc,5
+A_A_PAT_2065_953,0.0,A,A_PAT_2065,88,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_392_955,1.0,A,A_PAT_392,48,male,3,7.0,5.0,face,false,false,true,true,true,true,false,true,true,true,true,false,false,bcc,1
+A_A_PAT_528_960,1.0,A,A_PAT_528,75,female,2,8.0,6.0,forearm,false,false,true,false,false,true,false,false,false,false,false,true,true,ak,0
+A_A_PAT_330_964,1.0,A,A_PAT_330,71,male,2,15.0,14.0,chest,false,true,true,false,false,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_1481_967,1.0,A,A_PAT_1481,60,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_330_976,1.0,A,A_PAT_330,72,male,2,7.0,4.0,neck,false,false,true,unk,unk,true,false,false,false,false,false,true,true,scc,5
+A_A_PAT_535_986,1.0,A,A_PAT_535,56,female,1,6.0,5.0,face,false,false,false,unk,unk,true,false,false,true,true,false,true,true,bcc,1
+A_A_PAT_142_990,1.0,A,A_PAT_142,78,female,1,6.0,5.0,face,false,false,true,unk,unk,true,false,false,true,true,false,false,false,bcc,1
+A_A_PAT_528_992,1.0,A,A_PAT_528,75,female,2,8.0,6.0,arm,false,false,true,false,false,true,false,false,false,false,false,true,true,ak,0
+A_A_PAT_1955_1010,1.0,A,A_PAT_1955,58,unknown,0,-1.0,-1.0,face,false,false,true,true,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1408_1016,0.0,A,A_PAT_1408,68,unknown,0,-1.0,-1.0,ear,false,false,false,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_1951_1017,1.0,A,A_PAT_1951,79,unknown,0,-1.0,-1.0,arm,true,false,true,true,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_914_1021,1.0,A,A_PAT_914,74,female,2,6.0,6.0,hand,false,false,true,false,false,true,false,false,false,false,false,true,true,ak,0
+A_A_PAT_457_1024,1.0,A,A_PAT_457,77,female,2,7.0,4.0,forearm,false,false,true,false,false,false,false,false,false,false,false,false,false,ak,0
+A_A_PAT_1061_1030,1.0,A,A_PAT_1061,42,unknown,0,-1.0,-1.0,chest,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_267_1036,1.0,A,A_PAT_267,79,male,2,14.0,14.0,arm,true,false,true,false,true,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_2049_1038,0.0,A,A_PAT_2049,51,unknown,0,-1.0,-1.0,arm,false,false,false,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_677_1051,1.0,A,A_PAT_677,75,male,2,8.0,6.0,thigh,false,false,true,false,true,true,false,false,true,false,true,true,true,ak,0
+A_A_PAT_1819_1059,1.0,A,A_PAT_1819,48,unknown,0,-1.0,-1.0,hand,false,false,false,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_154_1081,1.0,A,A_PAT_154,78,male,3,5.0,5.0,face,true,true,true,false,true,false,true,true,true,true,true,false,false,bcc,1
+A_A_PAT_419_1087,1.0,A,A_PAT_419,80,female,2,7.0,5.0,forearm,false,false,true,false,false,false,false,false,false,true,false,false,false,ak,0
+A_A_PAT_745_1103,1.0,A,A_PAT_745,74,male,2,20.0,10.0,forearm,true,true,true,unk,unk,true,false,true,false,true,false,true,true,bcc,1
+A_A_PAT_1246_1118,1.0,A,A_PAT_1246,51,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1406_1125,0.0,A,A_PAT_1406,62,unknown,0,-1.0,-1.0,face,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_834_1139,1.0,A,A_PAT_834,81,male,2,10.0,9.0,back,false,false,false,false,false,true,false,false,true,true,false,true,false,scc,5
+A_A_PAT_265_1141,1.0,A,A_PAT_265,44,male,2,10.0,10.0,nose,false,false,true,false,true,true,false,false,false,true,true,false,false,bcc,1
+A_A_PAT_505_1150,1.0,A,A_PAT_505,71,female,2,7.0,6.0,nose,false,false,true,false,false,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_719_1156,1.0,A,A_PAT_719,66,female,2,29.0,19.0,forearm,false,false,false,false,false,false,false,false,true,true,true,true,true,melanoma,3
+A_A_PAT_1893_1157,1.0,A,A_PAT_1893,61,unknown,0,-1.0,-1.0,hand,false,false,false,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1729_1170,1.0,A,A_PAT_1729,69,unknown,0,-1.0,-1.0,ear,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_593_1171,1.0,A,A_PAT_593,72,male,2,22.0,11.0,back,true,true,true,unk,unk,true,false,false,false,false,false,true,false,bcc,1
+A_A_PAT_931_1178,1.0,A,A_PAT_931,71,female,2,13.0,7.0,hand,false,false,true,false,false,false,false,false,false,false,false,true,true,ak,0
+A_A_PAT_678_1179,1.0,A,A_PAT_678,59,male,2,8.0,6.0,face,false,false,true,unk,unk,true,true,true,false,true,false,true,true,scc,5
+A_A_PAT_822_1190,1.0,A,A_PAT_822,72,male,3,13.0,10.0,face,false,false,true,false,true,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_629_1192,1.0,A,A_PAT_629,65,male,2,15.0,13.0,forearm,true,false,true,unk,unk,true,true,true,false,false,true,true,true,scc,5
+A_A_PAT_1603_1194,0.0,A,A_PAT_1603,12,unknown,0,-1.0,-1.0,back,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_650_1198,1.0,A,A_PAT_650,73,female,2,8.0,6.0,back,true,true,true,unk,unk,false,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_460_1200,1.0,A,A_PAT_460,73,female,2,18.0,16.0,lip,true,true,true,false,false,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_1393_1217,1.0,A,A_PAT_1393,65,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_2020_1223,1.0,A,A_PAT_2020,74,unknown,0,-1.0,-1.0,thigh,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_559_1226,1.0,A,A_PAT_559,54,male,1,35.0,20.0,chest,true,true,true,false,true,true,true,false,false,false,true,true,true,bcc,1
+A_A_PAT_428_1235,1.0,A,A_PAT_428,73,female,3,10.0,9.0,face,true,false,true,false,false,false,false,false,false,false,false,false,false,ak,0
+A_A_PAT_2003_1238,1.0,A,A_PAT_2003,46,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1113_1246,0.0,A,A_PAT_1113,47,unknown,0,-1.0,-1.0,face,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_67_1251,1.0,A,A_PAT_67,37,male,5,18.0,14.0,face,true,true,true,false,true,true,false,true,true,false,true,true,true,bcc,1
+A_A_PAT_2108_1252,0.0,A,A_PAT_2108,65,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_330_1263,1.0,A,A_PAT_330,72,male,2,15.0,15.0,chest,true,true,true,false,true,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_615_1264,0.0,A,A_PAT_615,16,female,2,5.0,4.0,chest,false,false,false,unk,unk,true,false,false,false,false,false,true,true,nevus,4
+A_A_PAT_988_1266,1.0,A,A_PAT_988,78,female,3,7.0,5.0,face,true,false,true,false,false,true,false,false,false,true,false,true,false,bcc,1
+A_A_PAT_156_1277,1.0,A,A_PAT_156,81,male,2,22.0,6.0,chest,false,false,true,false,true,true,false,false,true,true,true,false,false,bcc,1
+A_A_PAT_1373_1281,1.0,A,A_PAT_1373,39,unknown,0,-1.0,-1.0,forearm,true,false,true,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_2017_1291,0.0,A,A_PAT_2017,17,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_481_1296,1.0,A,A_PAT_481,54,female,2,7.0,6.0,back,true,false,true,false,true,true,false,false,true,false,false,false,false,bcc,1
+A_A_PAT_32_1305,1.0,A,A_PAT_32,64,female,2,7.0,5.0,face,false,false,false,unk,unk,true,false,true,true,true,false,true,true,bcc,1
+A_A_PAT_330_1308,1.0,A,A_PAT_330,71,male,2,7.0,5.0,nose,false,false,false,false,false,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_983_1313,1.0,A,A_PAT_983,78,female,2,10.0,9.0,arm,false,true,true,false,false,true,false,false,false,false,false,true,true,ak,0
+A_A_PAT_1176_1326,1.0,A,A_PAT_1176,69,unknown,0,-1.0,-1.0,forearm,false,false,true,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_931_1336,1.0,A,A_PAT_931,71,female,2,7.0,7.0,hand,false,false,true,false,false,true,false,false,false,false,false,true,true,ak,0
+A_A_PAT_359_1340,1.0,A,A_PAT_359,54,female,3,10.0,10.0,thigh,false,true,false,false,true,true,false,false,true,true,false,true,true,ak,0
+A_A_PAT_827_1345,1.0,A,A_PAT_827,67,male,2,15.0,15.0,forearm,false,false,true,unk,unk,true,true,false,false,false,false,true,true,bcc,1
+A_A_PAT_457_1353,1.0,A,A_PAT_457,77,female,2,6.0,4.0,face,true,true,true,false,true,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_701_1357,0.0,A,A_PAT_701,69,male,2,10.0,5.0,face,false,false,false,unk,unk,true,false,true,false,true,false,true,true,seborrheic_keratosis,6
+A_A_PAT_306_1360,1.0,A,A_PAT_306,87,male,2,10.0,10.0,forearm,true,false,true,false,false,true,false,false,false,false,true,true,true,ak,0
+A_A_PAT_1431_1365,1.0,A,A_PAT_1431,58,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_822_1371,1.0,A,A_PAT_822,72,male,3,17.0,14.0,face,true,false,true,true,true,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_119_1373,1.0,A,A_PAT_119,77,female,2,5.0,5.0,face,true,true,true,false,true,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_834_1383,1.0,A,A_PAT_834,81,male,2,10.0,9.0,back,false,false,false,false,false,true,false,false,true,true,false,true,false,scc,5
+A_A_PAT_122_1396,1.0,A,A_PAT_122,79,female,1,10.0,8.0,chest,false,false,true,unk,unk,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_678_1404,1.0,A,A_PAT_678,59,male,2,7.0,5.0,back,false,false,false,unk,unk,true,true,true,false,true,false,true,true,bcc,1
+A_A_PAT_1861_1409,0.0,A,A_PAT_1861,72,unknown,0,-1.0,-1.0,face,false,false,true,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_914_1422,1.0,A,A_PAT_914,74,female,2,10.0,8.0,face,false,false,true,false,false,false,false,false,false,false,false,true,true,ak,0
+A_A_PAT_622_1424,1.0,A,A_PAT_622,71,male,2,10.0,10.0,back,false,false,false,unk,unk,false,false,true,false,false,true,false,false,melanoma,3
+A_A_PAT_738_1430,1.0,A,A_PAT_738,58,female,2,3.0,3.0,face,true,false,false,false,false,true,false,false,true,true,true,false,true,bcc,1
+A_A_PAT_760_1433,1.0,A,A_PAT_760,66,female,3,4.0,3.0,nose,true,false,true,unk,unk,true,false,false,true,true,false,true,true,bcc,1
+A_A_PAT_899_1438,1.0,A,A_PAT_899,63,female,3,6.0,4.0,face,false,false,true,unk,unk,true,false,false,true,true,false,false,false,bcc,1
+A_A_PAT_330_1440,1.0,A,A_PAT_330,72,male,2,15.0,15.0,chest,true,true,true,false,true,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_2046_1441,0.0,A,A_PAT_2046,74,unknown,0,-1.0,-1.0,face,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_265_1450,1.0,A,A_PAT_265,44,male,2,10.0,10.0,nose,false,false,true,false,true,true,false,false,false,true,true,false,false,bcc,1
+A_A_PAT_265_1451,0.0,A,A_PAT_265,67,male,2,10.0,8.0,back,false,false,true,false,true,true,false,false,false,true,true,false,false,seborrheic_keratosis,6
+A_A_PAT_1313_1456,1.0,A,A_PAT_1313,33,unknown,0,-1.0,-1.0,hand,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1393_1460,1.0,A,A_PAT_1393,65,unknown,0,-1.0,-1.0,neck,false,true,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_738_1482,0.0,A,A_PAT_738,57,female,2,3.0,3.0,back,false,false,true,false,true,true,false,false,true,true,true,false,true,seborrheic_keratosis,6
+A_A_PAT_1127_1490,1.0,A,A_PAT_1127,40,unknown,0,-1.0,-1.0,hand,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_138_1499,1.0,A,A_PAT_138,61,male,2,25.0,12.0,chest,true,true,true,unk,unk,true,true,true,false,false,false,false,false,bcc,1
+A_A_PAT_1427_1504,1.0,A,A_PAT_1427,47,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_194_1512,0.0,A,A_PAT_194,63,female,4,6.0,4.0,neck,false,false,false,true,true,false,false,false,true,false,false,true,true,seborrheic_keratosis,6
+A_A_PAT_345_1514,0.0,A,A_PAT_345,53,male,2,10.0,10.0,back,false,false,false,unk,unk,true,false,true,true,true,false,true,true,nevus,4
+A_A_PAT_612_1519,1.0,A,A_PAT_612,90,female,1,19.0,15.0,arm,false,unk,unk,unk,unk,true,false,false,true,false,false,true,true,scc,5
+A_A_PAT_63_1521,1.0,A,A_PAT_63,35,female,2,11.0,7.0,face,false,false,false,false,false,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_242_1534,1.0,A,A_PAT_242,45,female,2,12.0,12.0,chest,false,false,true,false,true,true,true,true,true,true,false,true,true,bcc,1
+A_A_PAT_320_1537,1.0,A,A_PAT_320,70,male,3,9.0,9.0,face,false,false,false,true,true,false,false,true,false,false,true,false,false,melanoma,3
+A_A_PAT_573_1543,1.0,A,A_PAT_573,51,female,4,9.0,7.0,face,false,true,true,false,true,true,false,false,false,true,true,false,false,bcc,1
+A_A_PAT_988_1545,1.0,A,A_PAT_988,78,female,3,7.0,5.0,face,true,false,true,false,false,true,false,false,false,true,false,true,false,bcc,1
+A_A_PAT_1882_1548,0.0,A,A_PAT_1882,58,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_1300_1549,1.0,A,A_PAT_1300,75,unknown,0,-1.0,-1.0,nose,false,false,true,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1396_1552,0.0,A,A_PAT_1396,52,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_1259_1554,1.0,A,A_PAT_1259,72,unknown,0,-1.0,-1.0,nose,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_544_1571,1.0,A,A_PAT_544,87,female,2,5.0,4.0,face,false,false,true,false,true,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_267_1577,0.0,A,A_PAT_267,79,male,2,14.0,14.0,face,false,false,false,false,false,true,false,false,false,false,false,false,false,seborrheic_keratosis,6
+A_A_PAT_229_1585,1.0,A,A_PAT_229,74,male,3,10.0,8.0,nose,true,false,true,false,false,true,false,true,true,true,false,false,false,bcc,1
+A_A_PAT_707_1591,1.0,A,A_PAT_707,55,female,5,1.0,1.0,nose,false,false,false,false,false,true,false,false,true,false,true,true,true,ak,0
+A_A_PAT_271_1593,1.0,A,A_PAT_271,79,female,2,12.0,10.0,chest,false,true,true,false,false,true,false,false,true,false,false,true,true,scc,5
+A_A_PAT_1376_1594,1.0,A,A_PAT_1376,75,unknown,0,-1.0,-1.0,forearm,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_330_1601,1.0,A,A_PAT_330,71,male,2,10.0,7.0,neck,true,false,true,false,false,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_1866_1610,1.0,A,A_PAT_1866,77,unknown,0,-1.0,-1.0,forearm,true,true,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_460_1611,1.0,A,A_PAT_460,73,female,2,13.0,8.0,nose,true,true,true,false,true,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_359_1614,1.0,A,A_PAT_359,53,female,3,6.0,5.0,face,true,false,true,false,true,true,false,false,true,true,false,true,true,scc,5
+A_A_PAT_154_1625,1.0,A,A_PAT_154,78,male,3,9.0,7.0,arm,false,false,true,false,true,true,true,true,true,true,true,false,false,bcc,1
+A_A_PAT_271_1641,1.0,A,A_PAT_271,79,female,2,12.0,10.0,chest,false,true,true,false,false,true,false,false,true,false,false,true,true,scc,5
+A_A_PAT_2097_1643,0.0,A,A_PAT_2097,37,unknown,0,-1.0,-1.0,ear,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_505_1646,1.0,A,A_PAT_505,71,female,2,7.0,6.0,chest,false,false,true,false,false,true,false,false,true,false,false,true,true,ak,0
+A_A_PAT_1021_1655,1.0,A,A_PAT_1021,37,unknown,0,-1.0,-1.0,nose,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1707_1669,1.0,A,A_PAT_1707,75,unknown,0,-1.0,-1.0,face,true,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_45_1681,1.0,A,A_PAT_45,73,male,2,13.0,10.0,forearm,true,false,true,false,unk,false,false,false,false,true,false,false,false,ak,0
+A_A_PAT_1022_1686,1.0,A,A_PAT_1022,39,unknown,0,-1.0,-1.0,chest,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1822_1692,1.0,A,A_PAT_1822,77,unknown,0,-1.0,-1.0,forearm,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1427_1696,1.0,A,A_PAT_1427,47,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_154_1699,1.0,A,A_PAT_154,78,male,3,10.0,6.0,neck,true,true,true,unk,unk,true,true,true,true,true,true,false,false,bcc,1
+A_A_PAT_618_1717,1.0,A,A_PAT_618,70,male,1,5.0,3.0,ear,true,false,false,false,true,true,false,true,true,true,false,true,true,bcc,1
+A_A_PAT_1331_1724,0.0,A,A_PAT_1331,31,unknown,0,-1.0,-1.0,back,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_872_1733,1.0,A,A_PAT_872,71,female,2,6.0,5.0,hand,false,false,true,false,false,false,false,false,false,false,false,false,true,ak,0
+A_A_PAT_1000_1739,0.0,A,A_PAT_1000,65,unknown,0,-1.0,-1.0,ear,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_267_1742,1.0,A,A_PAT_267,79,male,2,30.0,15.0,ear,true,true,true,unk,unk,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_1633_1744,1.0,A,A_PAT_1633,51,unknown,0,-1.0,-1.0,back,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_615_1761,0.0,A,A_PAT_615,16,female,2,8.0,7.0,face,false,false,false,unk,unk,true,false,false,false,false,false,true,true,nevus,4
+A_A_PAT_677_1764,1.0,A,A_PAT_677,75,male,2,9.0,6.0,back,false,false,true,true,true,true,false,false,true,false,true,true,true,bcc,1
+A_A_PAT_1299_1771,1.0,A,A_PAT_1299,57,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_306_1772,1.0,A,A_PAT_306,87,male,2,10.0,10.0,face,true,false,true,false,true,true,false,false,false,false,true,true,true,bcc,1
+A_A_PAT_460_1783,1.0,A,A_PAT_460,73,female,2,18.0,16.0,lip,true,true,true,false,false,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_468_1786,1.0,A,A_PAT_468,42,male,2,7.0,3.0,forearm,false,true,false,false,true,false,false,true,false,true,false,true,false,ak,0
+A_A_PAT_308_1787,1.0,A,A_PAT_308,83,male,2,9.0,5.0,ear,true,true,true,unk,unk,true,false,false,true,true,false,true,true,bcc,1
+A_A_PAT_1443_1799,1.0,A,A_PAT_1443,58,unknown,0,-1.0,-1.0,neck,true,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_677_1801,1.0,A,A_PAT_677,75,male,2,8.0,6.0,thigh,false,false,true,false,true,true,false,false,true,false,true,true,true,ak,0
+A_A_PAT_2046_1809,0.0,A,A_PAT_2046,74,unknown,0,-1.0,-1.0,face,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_779_1815,1.0,A,A_PAT_779,50,male,2,40.0,30.0,face,false,false,false,unk,unk,true,false,true,true,false,true,true,true,bcc,1
+A_A_PAT_460_1817,1.0,A,A_PAT_460,73,female,2,13.0,8.0,nose,true,true,true,false,true,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_1798_1820,0.0,A,A_PAT_1798,68,unknown,0,-1.0,-1.0,scalp,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_503_1822,1.0,A,A_PAT_503,88,male,2,15.0,13.0,face,true,true,true,false,false,true,false,true,true,true,true,true,true,bcc,1
+A_A_PAT_591_1823,1.0,A,A_PAT_591,79,female,3,11.0,9.0,forearm,false,false,true,unk,unk,true,false,false,true,true,true,true,false,scc,5
+A_A_PAT_568_1851,1.0,A,A_PAT_568,38,female,3,4.0,2.0,nose,false,false,false,unk,unk,true,false,false,false,true,false,true,true,bcc,1
+A_A_PAT_166_1853,1.0,A,A_PAT_166,58,male,2,12.0,11.0,arm,false,false,false,unk,unk,true,false,true,true,false,false,false,false,bcc,1
+A_A_PAT_650_1876,1.0,A,A_PAT_650,73,female,2,10.0,7.0,back,false,false,true,unk,unk,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_686_1881,1.0,A,A_PAT_686,32,male,3,17.0,15.0,face,true,true,true,true,true,true,true,true,true,true,true,true,true,scc,5
+A_A_PAT_1161_1891,0.0,A,A_PAT_1161,38,unknown,0,-1.0,-1.0,chest,false,false,false,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_1740_1892,1.0,A,A_PAT_1740,54,unknown,0,-1.0,-1.0,forearm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_63_1901,1.0,A,A_PAT_63,36,female,2,15.0,10.0,chest,true,true,true,false,true,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_1581_1912,1.0,A,A_PAT_1581,92,unknown,0,-1.0,-1.0,chest,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_771_1922,1.0,A,A_PAT_771,69,male,3,10.0,9.0,hand,false,false,true,true,true,true,true,true,true,false,false,true,true,scc,5
+A_A_PAT_419_1924,1.0,A,A_PAT_419,80,female,2,7.0,5.0,hand,false,false,true,false,false,true,false,false,false,true,false,false,false,scc,5
+A_A_PAT_445_1927,1.0,A,A_PAT_445,61,female,2,15.0,7.0,nose,true,true,true,false,true,true,false,false,true,false,false,false,false,bcc,1
+A_A_PAT_370_1931,1.0,A,A_PAT_370,62,male,3,11.0,8.0,forearm,true,false,true,false,false,false,true,true,true,true,true,false,false,ak,0
+A_A_PAT_14_1949,1.0,A,A_PAT_14,70,male,2,10.0,6.0,face,true,true,true,unk,unk,true,false,true,true,false,false,true,true,bcc,1
+A_A_PAT_1223_1952,0.0,A,A_PAT_1223,35,unknown,0,-1.0,-1.0,face,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_677_1955,1.0,A,A_PAT_677,75,male,2,9.0,6.0,back,false,false,true,true,true,true,false,false,true,false,true,true,true,bcc,1
+A_A_PAT_771_1968,1.0,A,A_PAT_771,69,male,3,6.0,6.0,face,true,false,true,unk,unk,true,true,true,true,false,false,true,true,bcc,1
+A_A_PAT_364_1975,1.0,A,A_PAT_364,66,female,2,17.0,8.0,face,true,true,true,false,false,true,true,false,false,true,false,false,false,bcc,1
+A_A_PAT_573_1979,1.0,A,A_PAT_573,51,female,4,9.0,7.0,face,false,true,true,false,true,true,false,false,false,true,true,false,false,bcc,1
+A_A_PAT_834_1982,1.0,A,A_PAT_834,81,male,2,9.0,8.0,face,false,false,false,false,false,true,false,false,true,true,false,true,false,scc,5
+A_A_PAT_242_1988,1.0,A,A_PAT_242,45,female,2,12.0,12.0,chest,false,false,true,false,true,true,true,true,true,true,false,true,true,bcc,1
+A_A_PAT_1495_1990,0.0,A,A_PAT_1495,62,unknown,0,-1.0,-1.0,back,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_1345_1992,0.0,A,A_PAT_1345,56,unknown,0,-1.0,-1.0,back,false,false,false,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+A_A_PAT_392_1993,1.0,A,A_PAT_392,48,male,3,7.0,5.0,face,false,false,true,true,true,true,false,true,true,true,true,false,false,bcc,1
+A_A_PAT_370_2001,1.0,A,A_PAT_370,61,male,3,11.0,8.0,forearm,false,true,true,false,false,true,true,true,true,true,true,false,false,ak,0
+A_A_PAT_575_2006,1.0,A,A_PAT_575,80,female,1,10.0,9.0,face,true,false,true,false,true,true,false,false,false,true,false,true,true,bcc,1
+A_A_PAT_872_2013,1.0,A,A_PAT_872,71,female,2,10.0,6.0,forearm,false,false,true,false,false,true,false,false,false,false,false,false,true,ak,0
+A_A_PAT_822_2023,1.0,A,A_PAT_822,72,male,3,17.0,14.0,face,true,false,true,true,true,true,false,false,false,false,false,true,true,bcc,1
+A_A_PAT_574_2026,1.0,A,A_PAT_574,51,male,3,15.0,7.0,chest,false,false,true,unk,unk,true,false,false,true,true,true,true,true,scc,5
+A_A_PAT_1408_2027,0.0,A,A_PAT_1408,68,unknown,0,-1.0,-1.0,face,false,false,false,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_838_2031,1.0,A,A_PAT_838,53,female,3,18.0,10.0,neck,false,false,false,false,false,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_719_2033,1.0,A,A_PAT_719,66,female,2,29.0,19.0,forearm,false,false,false,false,false,false,false,false,true,true,true,true,true,melanoma,3
+A_A_PAT_2152_2038,0.0,A,A_PAT_2152,59,unknown,0,-1.0,-1.0,face,false,false,true,false,true,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_1707_2044,1.0,A,A_PAT_1707,75,unknown,0,-1.0,-1.0,chest,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_317_2050,1.0,A,A_PAT_317,65,female,3,7.0,5.0,nose,false,false,false,false,false,false,false,false,true,true,false,true,true,ak,0
+A_A_PAT_1074_2061,1.0,A,A_PAT_1074,45,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_213_2062,0.0,A,A_PAT_213,81,female,3,3.0,3.0,face,false,false,false,false,true,false,false,false,false,false,false,true,true,nevus,4
+A_A_PAT_1969_2075,1.0,A,A_PAT_1969,62,unknown,0,-1.0,-1.0,ear,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_983_2119,1.0,A,A_PAT_983,78,female,2,10.0,6.0,arm,false,true,true,false,false,true,false,false,false,false,false,true,true,ak,0
+A_A_PAT_1633_2127,1.0,A,A_PAT_1633,51,unknown,0,-1.0,-1.0,back,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1983_2137,1.0,A,A_PAT_1983,83,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_1734_2144,0.0,A,A_PAT_1734,72,unknown,0,-1.0,-1.0,forearm,false,false,true,false,true,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_931_2171,1.0,A,A_PAT_931,71,female,2,8.0,7.0,hand,false,false,true,false,false,false,false,false,false,false,false,true,true,ak,0
+A_A_PAT_267_2172,1.0,A,A_PAT_267,79,male,2,10.0,8.0,face,false,false,true,false,false,true,false,false,false,false,false,false,false,bcc,1
+A_A_PAT_113_2178,1.0,A,A_PAT_113,71,male,1,20.0,15.0,hand,false,true,true,unk,unk,true,false,true,false,false,false,false,false,scc,5
+A_A_PAT_1466_2179,1.0,A,A_PAT_1466,53,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_849_2181,1.0,A,A_PAT_849,63,male,2,4.0,4.0,back,false,unk,false,false,false,true,false,false,true,false,true,true,true,ak,0
+A_A_PAT_730_2186,1.0,A,A_PAT_730,51,male,3,9.0,7.0,chest,false,false,false,unk,unk,true,false,true,false,true,true,true,true,bcc,1
+A_A_PAT_838_2187,1.0,A,A_PAT_838,53,female,3,6.0,5.0,neck,false,false,false,unk,unk,true,false,false,true,false,false,true,true,bcc,1
+A_A_PAT_320_2190,1.0,A,A_PAT_320,70,male,3,9.0,9.0,face,false,false,false,true,true,false,false,true,false,false,true,false,false,melanoma,3
+A_A_PAT_82_2193,1.0,A,A_PAT_82,71,male,2,15.0,13.0,arm,true,true,true,false,true,true,false,false,true,false,true,false,false,bcc,1
+A_A_PAT_460_2201,1.0,A,A_PAT_460,73,female,2,18.0,16.0,lip,true,true,true,false,false,true,false,false,false,true,false,false,false,bcc,1
+A_A_PAT_650_2202,0.0,A,A_PAT_650,73,female,2,8.0,6.0,back,false,false,true,false,true,true,false,false,true,false,false,true,true,seborrheic_keratosis,6
+A_A_PAT_1246_2212,1.0,A,A_PAT_1246,51,unknown,0,-1.0,-1.0,arm,false,false,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_359_2222,1.0,A,A_PAT_359,53,female,3,6.0,5.0,face,true,false,true,false,true,true,false,false,true,true,false,true,true,scc,5
+A_A_PAT_503_2231,1.0,A,A_PAT_503,88,male,2,15.0,13.0,face,true,true,true,false,false,true,false,true,true,true,true,true,true,bcc,1
+A_A_PAT_575_2234,1.0,A,A_PAT_575,80,female,1,4.0,4.0,face,false,false,false,false,true,true,false,false,false,true,false,true,true,bcc,1
+A_A_PAT_856_2242,1.0,A,A_PAT_856,51,male,3,10.0,9.0,chest,true,true,true,false,false,true,false,true,true,true,true,true,true,bcc,1
+A_A_PAT_1392_2253,0.0,A,A_PAT_1392,68,unknown,0,-1.0,-1.0,neck,false,false,false,false,false,true,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+A_A_PAT_45_2255,1.0,A,A_PAT_45,73,male,2,15.0,14.0,chest,false,false,false,true,unk,false,false,false,false,true,false,false,false,melanoma,3
+A_A_PAT_229_2259,1.0,A,A_PAT_229,74,male,3,10.0,8.0,nose,true,false,true,false,false,true,false,true,true,true,false,false,false,bcc,1
+A_A_PAT_738_2261,0.0,A,A_PAT_738,57,female,2,3.0,3.0,back,false,false,true,false,true,true,false,false,true,true,true,false,true,seborrheic_keratosis,6
+A_A_PAT_1403_2274,1.0,A,A_PAT_1403,50,unknown,0,-1.0,-1.0,nose,false,false,false,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_498_2284,1.0,A,A_PAT_498,60,female,2,4.0,2.0,face,false,false,false,false,false,false,false,true,false,true,true,false,false,ak,0
+A_A_PAT_1294_2290,1.0,A,A_PAT_1294,35,unknown,0,-1.0,-1.0,face,false,true,true,false,false,false,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+A_A_PAT_273_2291,1.0,A,A_PAT_273,41,male,2,9.0,5.0,face,true,true,true,unk,unk,true,false,false,false,false,true,false,false,bcc,1
+B_B_2_2305,0.0,B,B_2,34,male,2,3.0,-1.0,right upper eyelid,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_2_2306,0.0,B,B_2,34,male,2,3.0,-1.0,right upper eyelid,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_2_2307,0.0,B,B_2,34,male,2,3.0,-1.0,right upper eyelid,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_8_2333,1.0,B,B_8,87,male,3,4.0,-1.0,l ear,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_8_2334,1.0,B,B_8,87,male,3,4.0,-1.0,l ear,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_8_2335,1.0,B,B_8,87,male,3,4.0,-1.0,l ear,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_8_2336,1.0,B,B_8,87,male,3,4.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_8_2337,1.0,B,B_8,87,male,3,4.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_8_2338,1.0,B,B_8,87,male,3,4.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_10_2342,0.0,B,B_10,40,male,2,11.5,-1.0,l medial ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_10_2343,0.0,B,B_10,40,male,2,11.5,-1.0,l medial ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_10_2344,0.0,B,B_10,40,male,2,11.5,-1.0,l medial ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_15_2397,0.0,B,B_15,68,female,2,7.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_15_2398,0.0,B,B_15,68,female,2,7.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_21_2420,0.0,B,B_21,62,male,2,22.5,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_21_2421,0.0,B,B_21,62,male,2,22.5,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_21_2422,0.0,B,B_21,62,male,2,22.5,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_21_2423,0.0,B,B_21,62,male,2,6.5,-1.0,r elbow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_21_2424,0.0,B,B_21,62,male,2,6.5,-1.0,r elbow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_21_2425,0.0,B,B_21,62,male,2,6.5,-1.0,r elbow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_37_2554,0.0,B,B_37,49,female,2,3.5,-1.0,r index finger,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_37_2555,0.0,B,B_37,49,female,2,3.5,-1.0,r index finger,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_37_2556,0.0,B,B_37,49,female,2,3.5,-1.0,r index finger,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_61_2697,0.0,B,B_61,43,male,4,3.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_61_2698,0.0,B,B_61,43,male,4,3.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_74_2749,0.0,B,B_74,66,male,2,4.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_74_2750,0.0,B,B_74,66,male,2,4.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_74_2751,0.0,B,B_74,66,male,2,4.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_88_2810,0.0,B,B_88,74,male,2,6.0,-1.0,l ribcage,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_88_2811,0.0,B,B_88,74,male,2,4.5,-1.0,neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_94_2865,1.0,B,B_94,54,female,1,2.0,-1.0,left cutaneous lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_94_2866,1.0,B,B_94,54,female,1,2.0,-1.0,left cutaneous lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_94_2867,1.0,B,B_94,54,female,1,3.0,-1.0,nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_94_2868,1.0,B,B_94,54,female,1,3.0,-1.0,nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_94_2869,1.0,B,B_94,54,female,1,2.0,-1.0,left cutaneous lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_94_2870,1.0,B,B_94,54,female,1,3.0,-1.0,nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_94_2871,1.0,B,B_94,54,female,1,2.0,-1.0,left cutaneous lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3015,1.0,B,B_121,58,male,2,6.5,-1.0,r lateral leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3016,1.0,B,B_121,58,male,2,6.5,-1.0,r lateral leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3017,1.0,B,B_121,58,male,2,6.5,-1.0,r lateral leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3018,1.0,B,B_121,58,male,2,5.0,-1.0,r dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_121_3019,1.0,B,B_121,58,male,2,5.0,-1.0,r dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_121_3020,1.0,B,B_121,58,male,2,5.0,-1.0,r dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_121_3021,1.0,B,B_121,58,male,2,4.0,-1.0,left posterior shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3022,1.0,B,B_121,58,male,2,4.0,-1.0,left posterior shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3023,1.0,B,B_121,58,male,2,4.0,-1.0,left posterior shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3024,0.0,B,B_121,58,female,2,10.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_121_3025,0.0,B,B_121,58,female,2,10.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_121_3026,1.0,B,B_121,58,female,2,6.0,-1.0,l lateral thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3027,1.0,B,B_121,58,female,2,5.0,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3028,1.0,B,B_121,58,female,2,5.0,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3029,0.0,B,B_121,58,female,2,10.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_121_3030,1.0,B,B_121,58,male,2,6.0,-1.0,l lateral thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3031,1.0,B,B_121,58,male,2,5.0,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_121_3032,1.0,B,B_121,58,male,2,6.0,-1.0,l lateral thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_135_3082,1.0,B,B_135,82,female,2,7.0,-1.0,r retro auricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_135_3083,1.0,B,B_135,82,female,2,7.0,-1.0,r retro auricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_135_3084,1.0,B,B_135,82,female,2,7.0,-1.0,r retro auricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_144_3116,0.0,B,B_144,80,male,2,3.25,-1.0,r foot,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_144_3117,0.0,B,B_144,80,male,2,3.25,-1.0,r foot,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_144_3118,0.0,B,B_144,80,male,2,3.25,-1.0,r foot,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_147_3125,0.0,B,B_147,39,female,3,6.0,-1.0,left cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_147_3126,0.0,B,B_147,39,female,3,6.0,-1.0,left cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_147_3127,0.0,B,B_147,39,female,3,6.0,-1.0,left cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_157_3173,0.0,B,B_157,51,female,2,5.5,-1.0,r shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_157_3174,0.0,B,B_157,51,female,2,5.5,-1.0,r shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_157_3175,0.0,B,B_157,51,female,2,5.5,-1.0,r shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_174_3243,1.0,B,B_174,62,male,2,3.5,-1.0,r antihelix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_174_3244,1.0,B,B_174,62,male,2,6.5,-1.0,left posterior calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3245,1.0,B,B_174,62,male,2,6.5,-1.0,left posterior calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3246,1.0,B,B_174,62,male,2,6.5,-1.0,left posterior calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3247,1.0,B,B_174,62,male,2,6.5,-1.0,right neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3248,1.0,B,B_174,62,male,2,6.5,-1.0,right neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3249,1.0,B,B_174,62,female,2,6.5,-1.0,right neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3250,1.0,B,B_174,62,female,2,6.5,-1.0,r lateral calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3251,1.0,B,B_174,62,female,2,6.5,-1.0,r lateral calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3252,1.0,B,B_174,62,male,2,6.5,-1.0,r lateral calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3253,1.0,B,B_174,62,male,2,6.5,-1.0,superior l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3254,1.0,B,B_174,62,male,2,6.5,-1.0,superior l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3255,1.0,B,B_174,62,female,2,6.5,-1.0,superior l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3256,1.0,B,B_174,62,female,2,3.5,-1.0,r antihelix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_174_3257,1.0,B,B_174,62,female,2,3.5,-1.0,r antihelix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_174_3258,1.0,B,B_174,62,female,2,6.5,-1.0,l mid back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3259,1.0,B,B_174,62,female,2,6.5,-1.0,l mid back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3260,1.0,B,B_174,62,female,2,6.5,-1.0,l mid back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3261,1.0,B,B_174,62,male,2,7.5,-1.0,upper chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3262,1.0,B,B_174,62,male,2,7.5,-1.0,upper chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3263,1.0,B,B_174,62,male,2,7.5,-1.0,upper chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3264,1.0,B,B_174,62,male,2,8.0,-1.0,mid chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3265,1.0,B,B_174,62,male,2,8.0,-1.0,mid chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3266,1.0,B,B_174,62,male,2,8.0,-1.0,mid chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_174_3267,1.0,B,B_174,62,male,2,3.5,-1.0,r antihelix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_189_3321,1.0,B,B_189,99,male,2,6.0,-1.0,right helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_189_3322,1.0,B,B_189,99,male,2,6.0,-1.0,right helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_189_3323,1.0,B,B_189,99,male,2,6.0,-1.0,right helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_192_3333,0.0,B,B_192,52,male,2,7.0,-1.0,right flank,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_192_3334,0.0,B,B_192,52,male,2,7.0,-1.0,right flank,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_192_3335,0.0,B,B_192,52,male,2,7.0,-1.0,right flank,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_196_3354,0.0,B,B_196,54,female,2,4.0,-1.0,l chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_196_3355,0.0,B,B_196,54,female,2,4.0,-1.0,l chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_196_3356,0.0,B,B_196,54,female,2,4.0,-1.0,l chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_204_3396,0.0,B,B_204,66,male,2,7.5,-1.0,right lateral neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_204_3397,0.0,B,B_204,66,female,2,7.5,-1.0,right lateral neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_204_3398,0.0,B,B_204,66,female,2,7.5,-1.0,right lateral neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_204_3399,0.0,B,B_204,66,female,2,7.5,-1.0,right lateral neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_204_3400,0.0,B,B_204,66,female,2,1.0,-1.0,nose,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_208_3422,0.0,B,B_208,59,female,2,6.0,-1.0,left lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_208_3423,0.0,B,B_208,59,female,2,6.0,-1.0,left lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_208_3424,0.0,B,B_208,59,male,2,6.0,-1.0,left lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_208_3425,0.0,B,B_208,59,male,2,6.0,-1.0,left lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_211_3432,1.0,B,B_211,69,male,2,10.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_211_3433,1.0,B,B_211,69,male,2,10.0,-1.0,l shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_211_3434,1.0,B,B_211,69,male,2,80.0,-1.0,frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_211_3435,1.0,B,B_211,69,female,2,80.0,-1.0,frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_211_3436,1.0,B,B_211,69,female,2,80.0,-1.0,frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_211_3437,1.0,B,B_211,69,female,2,10.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_211_3438,1.0,B,B_211,69,female,2,10.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_211_3439,1.0,B,B_211,69,female,2,10.0,-1.0,l shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_211_3440,1.0,B,B_211,69,female,2,10.0,-1.0,l shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_218_3465,1.0,B,B_218,60,male,2,13.0,-1.0,left thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_218_3466,1.0,B,B_218,60,male,2,13.0,-1.0,left thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_218_3467,1.0,B,B_218,60,male,2,13.0,-1.0,left thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_231_3571,0.0,B,B_231,63,female,3,3.5,-1.0,l medial cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_231_3572,0.0,B,B_231,63,female,3,3.5,-1.0,l medial cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_231_3573,0.0,B,B_231,63,female,3,3.5,-1.0,l medial cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_243_3625,1.0,B,B_243,72,male,2,9.0,-1.0,r forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_243_3626,1.0,B,B_243,72,male,2,9.0,-1.0,r forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_243_3627,1.0,B,B_243,72,male,2,9.0,-1.0,r forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_261_3699,1.0,B,B_261,73,female,2,4.0,-1.0,right dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_261_3700,1.0,B,B_261,73,female,2,4.0,-1.0,right dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_261_3701,1.0,B,B_261,73,female,2,4.0,-1.0,right dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_262_3702,1.0,B,B_262,85,female,2,6.5,-1.0,right cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3703,1.0,B,B_262,85,female,2,6.5,-1.0,right cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3704,1.0,B,B_262,85,female,2,4.5,-1.0,right temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_262_3705,1.0,B,B_262,85,female,2,4.5,-1.0,right temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_262_3706,1.0,B,B_262,85,female,2,7.5,-1.0,left posterior helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3707,1.0,B,B_262,85,female,2,7.5,-1.0,left posterior helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3708,1.0,B,B_262,85,female,2,12.5,-1.0,left shin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_262_3709,1.0,B,B_262,85,female,2,12.5,-1.0,left shin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_262_3710,1.0,B,B_262,85,female,2,9.0,-1.0,left upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3711,1.0,B,B_262,85,female,2,9.0,-1.0,left upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3712,0.0,B,B_262,85,female,2,15.0,-1.0,left buttock,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_262_3713,0.0,B,B_262,85,female,2,15.0,-1.0,left buttock,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_262_3714,0.0,B,B_262,85,female,2,15.0,-1.0,left buttock,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_262_3715,1.0,B,B_262,85,female,2,12.5,-1.0,left shin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_262_3716,1.0,B,B_262,85,female,2,7.5,-1.0,left posterior helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3717,1.0,B,B_262,85,female,2,4.5,-1.0,right temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_262_3718,1.0,B,B_262,85,female,2,6.5,-1.0,right cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_262_3719,1.0,B,B_262,85,male,2,9.0,-1.0,left upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_263_3720,0.0,B,B_263,46,male,2,3.0,-1.0,mid back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_263_3721,0.0,B,B_263,46,male,2,3.0,-1.0,mid back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_263_3722,0.0,B,B_263,46,male,2,3.0,-1.0,mid back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_263_3723,0.0,B,B_263,46,male,2,5.0,-1.0,right shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_263_3724,0.0,B,B_263,46,male,2,5.0,-1.0,right shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_263_3725,0.0,B,B_263,46,female,2,5.0,-1.0,right shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_279_3807,1.0,B,B_279,73,male,2,5.0,-1.0,right chin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_279_3808,1.0,B,B_279,73,male,2,5.0,-1.0,right chin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_279_3809,1.0,B,B_279,73,male,2,5.0,-1.0,right chin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_284_3826,0.0,B,B_284,31,male,2,4.5,-1.0,r dorsal foot,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_287_3836,0.0,B,B_287,31,male,3,6.5,-1.0,scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_287_3837,0.0,B,B_287,31,male,3,6.5,-1.0,scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_287_3838,0.0,B,B_287,31,male,3,6.5,-1.0,scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_287_3839,0.0,B,B_287,31,female,3,6.5,-1.0,scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_290_3852,0.0,B,B_290,83,male,2,12.0,-1.0,r arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_290_3853,0.0,B,B_290,83,male,2,12.0,-1.0,r arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_290_3854,0.0,B,B_290,83,male,2,12.0,-1.0,r arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_292_3858,0.0,B,B_292,79,male,2,6.0,-1.0,chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_292_3859,0.0,B,B_292,79,male,2,6.0,-1.0,chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_294_3865,0.0,B,B_294,52,male,2,6.5,-1.0,right lower leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_294_3866,0.0,B,B_294,52,female,2,6.5,-1.0,right lower leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_294_3867,0.0,B,B_294,52,male,2,6.5,-1.0,right lower leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_294_3868,0.0,B,B_294,79,male,2,4.5,-1.0,r thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_294_3869,0.0,B,B_294,79,male,2,4.5,-1.0,r thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_294_3870,0.0,B,B_294,79,male,2,4.5,-1.0,r thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_297_3875,0.0,B,B_297,66,male,2,12.0,-1.0,l thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_297_3876,0.0,B,B_297,66,male,2,12.0,-1.0,l thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_297_3877,0.0,B,B_297,66,male,2,12.0,-1.0,l thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_297_3878,1.0,B,B_297,66,male,2,4.0,-1.0,right pre-auricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_297_3879,1.0,B,B_297,66,male,2,4.0,-1.0,right pre-auricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_297_3880,1.0,B,B_297,66,male,2,4.0,-1.0,right pre-auricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_299_3890,0.0,B,B_299,44,female,2,8.0,-1.0,r chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_299_3891,0.0,B,B_299,44,female,2,8.0,-1.0,r chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_299_3892,0.0,B,B_299,44,female,2,8.0,-1.0,r chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_304_3905,0.0,B,B_304,75,female,2,4.0,-1.0,l foot,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_304_3906,0.0,B,B_304,75,female,2,4.0,-1.0,l foot,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_304_3907,0.0,B,B_304,75,female,2,4.0,-1.0,l foot,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_308_3908,0.0,B,B_308,47,female,2,5.5,-1.0,right calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_308_3909,0.0,B,B_308,47,male,2,5.5,-1.0,right calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_308_3910,0.0,B,B_308,47,male,2,5.5,-1.0,right calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_322_3972,0.0,B,B_322,93,female,2,8.0,-1.0,r jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_322_3973,0.0,B,B_322,93,female,2,8.0,-1.0,r jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_322_3974,0.0,B,B_322,93,female,2,8.0,-1.0,r jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_324_3981,0.0,B,B_324,56,male,2,3.0,-1.0,r posterior thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_324_3982,0.0,B,B_324,56,male,2,3.0,-1.0,r posterior thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_324_3983,0.0,B,B_324,56,male,2,3.0,-1.0,r posterior thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_327_3990,0.0,B,B_327,46,male,2,5.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_327_3991,0.0,B,B_327,46,male,2,5.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_327_3992,0.0,B,B_327,46,male,2,5.0,-1.0,r upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_327_3993,0.0,B,B_327,46,male,2,5.0,-1.0,r upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_327_3994,0.0,B,B_327,46,male,2,5.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_327_3995,0.0,B,B_327,46,female,2,5.0,-1.0,r upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_343_4040,1.0,B,B_343,81,male,2,4.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_343_4041,1.0,B,B_343,81,male,2,4.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_343_4042,1.0,B,B_343,81,male,2,4.0,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_347_4050,0.0,B,B_347,68,male,2,9.5,-1.0,r back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_347_4051,0.0,B,B_347,68,male,2,9.5,-1.0,r back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_347_4052,0.0,B,B_347,68,male,2,9.5,-1.0,r back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_360_4105,1.0,B,B_360,50,male,3,4.5,-1.0,r preauricular cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_360_4106,1.0,B,B_360,50,male,3,4.5,-1.0,r preauricular cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_360_4107,1.0,B,B_360,50,male,3,4.5,-1.0,r preauricular cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_362_4111,0.0,B,B_362,71,male,4,4.0,-1.0,left chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_362_4112,0.0,B,B_362,71,male,4,4.0,-1.0,left chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_362_4113,0.0,B,B_362,71,male,4,4.0,-1.0,left chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_368_4130,0.0,B,B_368,79,male,1,1.0,-1.0,r proximal leg melanoma scar,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_368_4131,0.0,B,B_368,79,male,1,1.0,-1.0,r proximal leg melanoma scar,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_368_4132,0.0,B,B_368,79,female,1,1.0,-1.0,r proximal leg melanoma scar,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_387_4204,1.0,B,B_387,68,male,2,15.5,-1.0,central upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_387_4205,1.0,B,B_387,68,male,2,15.5,-1.0,central upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_387_4206,1.0,B,B_387,68,male,2,15.5,-1.0,central upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_400_4237,0.0,B,B_400,87,male,2,5.5,-1.0,r vertex scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_400_4238,0.0,B,B_400,87,male,2,5.5,-1.0,r vertex scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_400_4239,0.0,B,B_400,87,male,2,5.5,-1.0,r vertex scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_405_4261,0.0,B,B_405,66,male,2,7.0,-1.0,right lateral ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_405_4262,0.0,B,B_405,66,male,2,7.0,-1.0,right lateral ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_405_4263,0.0,B,B_405,66,male,2,7.0,-1.0,right lateral ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_408_4288,0.0,B,B_408,51,male,4,11.0,-1.0,l frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_408_4289,0.0,B,B_408,51,male,4,11.0,-1.0,l frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_408_4290,0.0,B,B_408,51,male,4,11.0,-1.0,l frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_412_4300,1.0,B,B_412,76,male,2,5.0,-1.0,r shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4301,1.0,B,B_412,76,male,2,5.0,-1.0,r shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4302,1.0,B,B_412,76,male,2,5.0,-1.0,r shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4303,1.0,B,B_412,76,female,2,4.0,-1.0,r chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4304,1.0,B,B_412,76,female,2,4.0,-1.0,r chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4305,1.0,B,B_412,76,female,2,4.0,-1.0,r chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4306,1.0,B,B_412,76,male,2,2.5,-1.0,mid nasal dorsum,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_412_4307,1.0,B,B_412,76,male,2,2.5,-1.0,mid nasal dorsum,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_412_4308,1.0,B,B_412,76,male,2,2.5,-1.0,mid nasal dorsum,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_412_4309,1.0,B,B_412,76,male,2,9.0,-1.0,left eyebrow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4310,1.0,B,B_412,76,male,2,9.0,-1.0,left eyebrow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_412_4311,1.0,B,B_412,76,male,2,9.0,-1.0,left eyebrow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_413_4312,1.0,B,B_413,66,male,2,10.0,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_413_4313,1.0,B,B_413,66,male,2,10.0,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_413_4314,1.0,B,B_413,66,male,2,10.0,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_418_4325,1.0,B,B_418,95,female,2,6.0,-1.0,r forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_418_4326,1.0,B,B_418,95,male,2,6.0,-1.0,r forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_418_4327,1.0,B,B_418,95,male,2,6.0,-1.0,r forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_418_4328,1.0,B,B_418,95,male,2,10.0,-1.0,r jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_418_4329,1.0,B,B_418,95,male,2,10.0,-1.0,r jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_418_4330,1.0,B,B_418,95,male,2,10.0,-1.0,r jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_428_4358,1.0,B,B_428,66,female,2,4.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_428_4359,1.0,B,B_428,66,male,2,4.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_428_4360,1.0,B,B_428,66,male,2,4.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_429_4361,0.0,B,B_429,86,male,2,7.0,-1.0,r dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_429_4362,0.0,B,B_429,86,male,2,7.0,-1.0,r dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_429_4363,0.0,B,B_429,86,male,2,7.0,-1.0,r dorsal hand,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_436_4388,1.0,B,B_436,88,male,2,4.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_436_4389,1.0,B,B_436,88,male,2,4.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_436_4390,1.0,B,B_436,88,male,2,4.5,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_436_4391,1.0,B,B_436,88,male,2,8.0,-1.0,mid posterior neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_436_4392,1.0,B,B_436,88,male,2,8.0,-1.0,mid posterior neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_436_4393,1.0,B,B_436,88,male,2,8.0,-1.0,mid posterior neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_440_4400,0.0,B,B_440,53,female,2,4.0,-1.0,right jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_440_4401,0.0,B,B_440,53,female,2,4.0,-1.0,right jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_440_4402,0.0,B,B_440,53,female,2,4.0,-1.0,right jaw,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_442_4409,1.0,B,B_442,34,female,2,4.5,-1.0,l knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_442_4410,1.0,B,B_442,34,female,2,4.5,-1.0,l knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_442_4411,1.0,B,B_442,34,female,2,4.5,-1.0,l knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_442_4412,0.0,B,B_442,34,female,2,2.0,-1.0,right ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4413,0.0,B,B_442,34,female,2,2.0,-1.0,right ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4414,0.0,B,B_442,34,female,2,2.0,-1.0,right ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4415,0.0,B,B_442,34,male,2,5.0,-1.0,left lower flank,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4416,0.0,B,B_442,34,male,2,5.0,-1.0,left lower flank,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4417,0.0,B,B_442,34,male,2,5.0,-1.0,left lower flank,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4418,0.0,B,B_442,34,male,2,7.5,-1.0,left groin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4419,0.0,B,B_442,34,male,2,7.5,-1.0,left groin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4420,0.0,B,B_442,34,male,2,7.5,-1.0,left groin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4421,0.0,B,B_442,34,male,2,5.0,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4422,0.0,B,B_442,34,male,2,5.0,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4423,0.0,B,B_442,34,male,2,5.0,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4424,0.0,B,B_442,34,male,2,3.5,-1.0,r lower chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4425,0.0,B,B_442,34,male,2,3.5,-1.0,r lower chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4426,0.0,B,B_442,34,male,2,3.5,-1.0,r lower chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4427,0.0,B,B_442,34,female,2,4.5,-1.0,l knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4428,0.0,B,B_442,34,female,2,7.5,-1.0,left groin,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_442_4429,0.0,B,B_442,34,female,2,2.0,-1.0,right ankle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_443_4430,0.0,B,B_443,65,female,2,7.0,-1.0,l upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_443_4431,0.0,B,B_443,65,female,2,7.0,-1.0,l upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_443_4432,0.0,B,B_443,65,female,2,7.0,-1.0,l upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_443_4433,0.0,B,B_443,65,female,2,6.0,-1.0,l lower lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_443_4434,0.0,B,B_443,65,female,2,6.0,-1.0,l lower lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_443_4435,0.0,B,B_443,65,female,2,6.0,-1.0,l lower lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_443_4436,0.0,B,B_443,65,female,2,6.0,-1.0,l lower lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_462_4502,1.0,B,B_462,55,male,2,6.5,-1.0,right medial knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_462_4503,1.0,B,B_462,55,male,2,6.5,-1.0,right medial knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_462_4504,1.0,B,B_462,55,male,2,6.5,-1.0,right medial knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_472_4553,1.0,B,B_472,75,female,2,5.5,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_472_4554,1.0,B,B_472,75,female,2,5.5,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_472_4555,1.0,B,B_472,75,female,2,5.5,-1.0,l forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_487_4624,0.0,B,B_487,45,male,1,8.0,-1.0,l preauricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_487_4625,0.0,B,B_487,45,male,1,8.0,-1.0,l preauricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_487_4626,0.0,B,B_487,45,male,1,8.0,-1.0,l preauricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_487_4627,1.0,B,B_487,45,female,1,6.5,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_487_4628,1.0,B,B_487,45,female,1,6.5,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_487_4629,1.0,B,B_487,45,female,1,6.5,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_487_4630,0.0,B,B_487,45,female,1,8.0,-1.0,l preauricular,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_488_4631,0.0,B,B_488,68,female,2,2.5,-1.0,r cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_488_4632,0.0,B,B_488,68,male,2,2.5,-1.0,r cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_488_4633,0.0,B,B_488,68,male,2,2.5,-1.0,r cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_497_4670,0.0,B,B_497,57,male,2,3.5,-1.0,right thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_497_4671,0.0,B,B_497,57,male,2,3.0,-1.0,right lateral canthus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_497_4672,0.0,B,B_497,57,male,2,3.0,-1.0,right lateral canthus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_497_4673,0.0,B,B_497,57,male,2,3.0,-1.0,right lateral canthus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_513_4732,1.0,B,B_513,81,male,2,7.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_513_4733,1.0,B,B_513,81,female,2,7.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_513_4734,1.0,B,B_513,81,female,2,7.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_513_4735,1.0,B,B_513,81,female,2,6.5,-1.0,left arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_513_4736,1.0,B,B_513,81,male,2,6.5,-1.0,left arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_513_4737,1.0,B,B_513,81,male,2,6.5,-1.0,left arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_528_4750,1.0,B,B_528,81,male,2,4.5,-1.0,l upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_528_4751,1.0,B,B_528,81,male,2,4.5,-1.0,l upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_528_4752,1.0,B,B_528,81,male,2,4.5,-1.0,l upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_528_4753,0.0,B,B_528,81,male,2,3.0,-1.0,r calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_528_4754,0.0,B,B_528,81,male,2,3.0,-1.0,r calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_528_4755,0.0,B,B_528,81,female,2,3.0,-1.0,r calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_538_4783,0.0,B,B_538,64,male,2,2.0,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_538_4784,0.0,B,B_538,64,male,2,2.0,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_538_4785,0.0,B,B_538,64,female,2,2.0,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_538_4786,0.0,B,B_538,64,male,2,10.0,-1.0,l chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_538_4787,0.0,B,B_538,64,male,2,10.0,-1.0,l chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_538_4788,0.0,B,B_538,64,male,2,10.0,-1.0,l chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_541_4795,1.0,B,B_541,60,male,3,3.5,-1.0,central upper abdomen,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_541_4796,1.0,B,B_541,60,male,3,3.5,-1.0,central upper abdomen,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_541_4797,1.0,B,B_541,60,male,3,3.5,-1.0,central upper abdomen,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_544_4803,1.0,B,B_544,73,male,2,5.0,-1.0,l nasal supratip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_544_4804,1.0,B,B_544,73,male,2,5.0,-1.0,l nasal supratip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_544_4805,1.0,B,B_544,73,male,2,5.0,-1.0,l nasal supratip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_548_4818,1.0,B,B_548,83,female,2,6.0,-1.0,l lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_548_4819,1.0,B,B_548,83,male,2,6.0,-1.0,l lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_548_4820,1.0,B,B_548,83,male,2,6.0,-1.0,l lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_560_4855,0.0,B,B_560,35,male,1,5.5,-1.0,r neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_560_4856,0.0,B,B_560,35,male,1,5.5,-1.0,r neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_560_4857,0.0,B,B_560,35,male,1,5.5,-1.0,r neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_565_4877,1.0,B,B_565,48,male,2,9.0,-1.0,right posterior calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_565_4878,1.0,B,B_565,48,female,2,9.0,-1.0,right posterior calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_565_4879,1.0,B,B_565,48,female,2,9.0,-1.0,right posterior calf,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_570_4895,1.0,B,B_570,37,male,2,4.0,-1.0,r posterior shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_570_4896,1.0,B,B_570,37,male,2,4.0,-1.0,r posterior shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_570_4897,1.0,B,B_570,37,male,2,4.0,-1.0,r posterior shoulder,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_570_4898,0.0,B,B_570,37,male,2,4.0,-1.0,r upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_570_4899,0.0,B,B_570,37,male,2,4.0,-1.0,r upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_570_4900,0.0,B,B_570,37,male,2,4.0,-1.0,r upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_570_4901,1.0,B,B_570,37,male,2,4.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_570_4902,1.0,B,B_570,37,male,2,4.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_570_4903,1.0,B,B_570,37,male,2,4.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_579_4926,0.0,B,B_579,29,female,2,4.0,-1.0,l clavicle,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_582_4936,0.0,B,B_582,29,male,2,7.0,-1.0,right upper abdomen,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_582_4937,0.0,B,B_582,29,male,2,7.0,-1.0,right upper abdomen,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_582_4938,0.0,B,B_582,29,male,2,7.0,-1.0,right upper abdomen,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_583_4939,1.0,B,B_583,87,male,2,5.0,-1.0,r thumb base,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_583_4940,1.0,B,B_583,87,male,2,5.0,-1.0,r thumb base,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_583_4941,1.0,B,B_583,87,male,2,5.0,-1.0,r thumb base,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_584_4942,0.0,B,B_584,38,male,2,7.5,-1.0,l inguinal crease,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_584_4943,0.0,B,B_584,38,male,2,7.5,-1.0,l inguinal crease,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_584_4944,0.0,B,B_584,38,male,2,7.5,-1.0,l inguinal crease,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_584_4945,0.0,B,B_584,38,male,2,7.5,-1.0,l inguinal crease,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_584_4946,0.0,B,B_584,38,male,2,7.5,-1.0,l inguinal crease,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_589_4952,1.0,B,B_589,73,female,2,3.5,-1.0,r back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_589_4953,1.0,B,B_589,73,female,2,3.5,-1.0,r back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_589_4954,1.0,B,B_589,73,female,2,3.5,-1.0,r back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_591_4956,0.0,B,B_591,60,male,0,0.0,-1.0,left arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4957,0.0,B,B_591,60,male,0,0.0,-1.0,left arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4958,0.0,B,B_591,60,female,0,0.0,-1.0,left arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4959,0.0,B,B_591,60,female,0,0.0,-1.0,chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4960,0.0,B,B_591,60,female,0,0.0,-1.0,chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4961,0.0,B,B_591,60,female,0,0.0,-1.0,chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4962,0.0,B,B_591,60,female,0,8.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4963,0.0,B,B_591,60,female,0,8.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_591_4964,0.0,B,B_591,60,female,0,8.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_594_4980,0.0,B,B_594,76,female,4,4.0,-1.0,l flank superior,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_594_4981,0.0,B,B_594,76,female,4,4.0,-1.0,l flank superior,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_594_4982,0.0,B,B_594,76,female,4,4.0,-1.0,l flank superior,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_594_4983,0.0,B,B_594,76,female,4,3.5,-1.0,l flank inferior,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_594_4984,0.0,B,B_594,76,male,4,3.5,-1.0,l flank inferior,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_594_4985,0.0,B,B_594,76,male,4,3.5,-1.0,l flank inferior,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_596_4989,0.0,B,B_596,37,female,2,5.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_596_4990,0.0,B,B_596,37,female,2,5.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_596_4991,0.0,B,B_596,37,female,2,5.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_604_5011,0.0,B,B_604,45,female,2,3.5,-1.0,l forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_604_5012,0.0,B,B_604,45,female,2,3.5,-1.0,l forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_604_5013,0.0,B,B_604,45,male,2,3.5,-1.0,l forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_606_5017,1.0,B,B_606,48,female,2,0.0,-1.0,lower vermilion lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_606_5018,1.0,B,B_606,48,female,2,0.0,-1.0,lower vermilion lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_606_5019,1.0,B,B_606,48,female,2,0.0,-1.0,lower vermilion lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_607_5020,1.0,B,B_607,52,female,2,10.5,-1.0,l lateral neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_607_5021,1.0,B,B_607,52,female,2,10.5,-1.0,l lateral neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_607_5022,1.0,B,B_607,52,female,2,10.5,-1.0,l lateral neck,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_610_5026,0.0,B,B_610,37,female,2,6.0,-1.0,left forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_610_5027,0.0,B,B_610,37,female,2,6.0,-1.0,left forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_610_5028,0.0,B,B_610,37,female,2,6.0,-1.0,left forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_610_5029,0.0,B,B_610,37,female,2,6.0,-1.0,left forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_611_5030,0.0,B,B_611,64,female,2,6.0,-1.0,left lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_611_5031,0.0,B,B_611,64,female,2,6.0,-1.0,left lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_611_5032,0.0,B,B_611,64,female,2,6.0,-1.0,left lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_612_5033,0.0,B,B_612,61,female,2,9.0,-1.0,nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_612_5034,0.0,B,B_612,61,female,2,9.0,-1.0,nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_612_5035,0.0,B,B_612,61,female,2,9.0,-1.0,nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_622_5070,0.0,B,B_622,56,male,1,3.0,-1.0,lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_622_5071,0.0,B,B_622,56,male,1,3.0,-1.0,lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_622_5072,0.0,B,B_622,56,male,1,3.0,-1.0,lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_623_5073,0.0,B,B_623,41,male,2,3.5,-1.0,r upper chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_626_5080,1.0,B,B_626,75,female,2,13.0,-1.0,l frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_626_5081,1.0,B,B_626,75,female,2,13.0,-1.0,l frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_626_5082,1.0,B,B_626,75,female,2,13.0,-1.0,l frontal scalp,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_634_5115,0.0,B,B_634,78,male,3,4.5,-1.0,right knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_634_5116,0.0,B,B_634,78,male,3,4.5,-1.0,right knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_634_5117,0.0,B,B_634,78,male,3,4.5,-1.0,right knee,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_637_5128,1.0,B,B_637,65,male,4,9.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_637_5129,1.0,B,B_637,65,male,4,9.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_637_5130,1.0,B,B_637,65,male,4,9.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_640_5147,0.0,B,B_640,74,female,2,4.0,-1.0,r upper eyelid,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_640_5148,0.0,B,B_640,74,female,2,4.0,-1.0,r upper eyelid,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_640_5149,1.0,B,B_640,74,female,2,8.0,-1.0,l eyebrow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_640_5150,1.0,B,B_640,74,female,2,8.0,-1.0,l eyebrow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_640_5151,1.0,B,B_640,74,male,2,3.0,-1.0,l helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_640_5152,1.0,B,B_640,74,male,2,3.0,-1.0,l helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_640_5153,0.0,B,B_640,74,male,2,4.0,-1.0,r upper eyelid,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_640_5154,1.0,B,B_640,74,male,2,8.0,-1.0,l eyebrow,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_640_5155,1.0,B,B_640,74,male,2,3.0,-1.0,l helix,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_650_5190,1.0,B,B_650,62,female,1,4.0,-1.0,mid nasal dorsum,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_650_5191,1.0,B,B_650,62,female,1,4.0,-1.0,mid nasal dorsum,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_650_5192,1.0,B,B_650,62,female,1,4.0,-1.0,mid nasal dorsum,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_653_5199,0.0,B,B_653,60,male,4,3.0,-1.0,l nasal ala,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_653_5200,0.0,B,B_653,60,male,4,3.0,-1.0,l nasal ala,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_653_5201,0.0,B,B_653,60,male,4,3.0,-1.0,l nasal ala,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_660_5230,0.0,B,B_660,79,female,2,5.5,-1.0,right chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_660_5231,0.0,B,B_660,79,female,2,5.5,-1.0,right chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_660_5232,0.0,B,B_660,79,female,2,5.5,-1.0,right chest,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_672_5262,1.0,B,B_672,83,male,3,4.0,-1.0,forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_672_5263,1.0,B,B_672,83,male,3,4.0,-1.0,forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_698_5291,0.0,B,B_698,59,male,1,2.5,-1.0,left upper thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_698_5292,0.0,B,B_698,59,female,1,2.5,-1.0,left upper thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_698_5293,0.0,B,B_698,59,female,1,2.5,-1.0,left upper thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_698_5294,0.0,B,B_698,59,female,1,4.0,-1.0,left mid thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_698_5295,0.0,B,B_698,59,female,1,4.0,-1.0,left mid thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_698_5296,0.0,B,B_698,59,female,1,4.0,-1.0,left mid thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_712_5336,1.0,B,B_712,86,male,2,9.0,-1.0,r cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_712_5337,1.0,B,B_712,86,male,2,9.0,-1.0,r cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_712_5338,1.0,B,B_712,86,male,2,9.0,-1.0,r cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_712_5339,0.0,B,B_712,86,male,2,1.5,-1.0,back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_720_5359,1.0,B,B_720,70,male,2,7.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_720_5360,1.0,B,B_720,70,male,2,7.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_720_5361,1.0,B,B_720,70,male,2,7.0,-1.0,r temple,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_725_5371,0.0,B,B_725,39,male,2,4.0,-1.0,r nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_725_5372,0.0,B,B_725,39,male,2,4.0,-1.0,r nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_725_5373,0.0,B,B_725,39,male,2,4.0,-1.0,r nasal bridge,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_730_5391,1.0,B,B_730,86,male,2,11.0,-1.0,l ear scapha,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_730_5392,1.0,B,B_730,86,male,2,11.0,-1.0,l ear scapha,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_730_5393,1.0,B,B_730,86,male,2,11.0,-1.0,l ear scapha,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_736_5415,0.0,B,B_736,60,male,2,6.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_736_5416,0.0,B,B_736,60,male,2,6.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_736_5417,0.0,B,B_736,60,male,2,6.0,-1.0,l upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_746_5465,1.0,B,B_746,84,male,2,4.0,-1.0,r forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_746_5466,1.0,B,B_746,84,male,2,4.0,-1.0,r forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_746_5467,1.0,B,B_746,84,male,2,4.0,-1.0,mid forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_746_5468,1.0,B,B_746,84,male,2,4.0,-1.0,mid forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_746_5469,1.0,B,B_746,84,male,2,4.0,-1.0,mid forehead,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_746_5470,1.0,B,B_746,84,male,2,4.0,-1.0,r forearm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,scc,5
+B_B_748_5474,0.0,B,B_748,29,female,2,3.5,-1.0,r thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_748_5475,0.0,B,B_748,29,female,2,3.5,-1.0,r thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_748_5476,0.0,B,B_748,29,female,2,3.5,-1.0,r thigh,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_753_5492,1.0,B,B_753,61,male,0,11.0,-1.0,r nasal supratip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_753_5493,1.0,B,B_753,61,male,0,11.0,-1.0,r nasal supratip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_753_5494,1.0,B,B_753,61,male,0,11.0,-1.0,r nasal supratip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_757_5504,0.0,B,B_757,55,male,3,2.0,-1.0,r medial malleolus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_757_5505,0.0,B,B_757,55,male,3,2.0,-1.0,r medial malleolus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_757_5506,0.0,B,B_757,55,male,3,2.0,-1.0,r medial malleolus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_757_5507,0.0,B,B_757,55,male,3,2.0,-1.0,r medial malleolus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_757_5508,0.0,B,B_757,55,male,3,2.0,-1.0,r medial malleolus,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_761_5522,0.0,B,B_761,61,male,2,4.0,-1.0,l lower leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_761_5523,0.0,B,B_761,61,male,2,4.0,-1.0,l lower leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_761_5524,0.0,B,B_761,61,male,2,4.0,-1.0,l lower leg,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,benign_other,2
+B_B_778_5558,1.0,B,B_778,36,female,2,3.5,-1.0,r upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_778_5559,1.0,B,B_778,36,female,2,3.5,-1.0,r upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_778_5560,1.0,B,B_778,36,female,2,3.5,-1.0,r upper arm,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,melanoma,3
+B_B_779_5561,1.0,B,B_779,82,male,0,10.5,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_779_5562,1.0,B,B_779,82,male,0,10.5,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_779_5563,1.0,B,B_779,82,male,0,10.5,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_779_5564,1.0,B,B_779,82,male,0,10.5,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_779_5565,1.0,B,B_779,82,male,0,10.5,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_779_5566,1.0,B,B_779,82,male,0,10.5,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_779_5567,1.0,B,B_779,82,male,0,10.5,-1.0,mid upper back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_782_5576,1.0,B,B_782,59,male,3,6.0,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_782_5577,0.0,B,B_782,59,male,3,2.0,-1.0,l cheek,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,seborrheic_keratosis,6
+B_B_782_5578,1.0,B,B_782,59,male,3,6.0,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_782_5579,1.0,B,B_782,59,male,3,6.0,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_782_5580,1.0,B,B_782,59,male,3,6.0,-1.0,l back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,bcc,1
+B_B_804_5628,1.0,B,B_804,56,female,2,3.0,-1.0,mid upper cutaneous lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_804_5629,1.0,B,B_804,56,female,2,3.0,-1.0,mid upper cutaneous lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_804_5630,1.0,B,B_804,56,female,2,3.0,-1.0,mid upper cutaneous lip,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,ak,0
+B_B_815_5656,0.0,B,B_815,52,female,1,9.5,-1.0,lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_815_5657,0.0,B,B_815,52,female,1,9.5,-1.0,lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4
+B_B_815_5658,0.0,B,B_815,52,female,1,9.5,-1.0,lower back,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,nevus,4

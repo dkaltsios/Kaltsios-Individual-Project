@@ -1,0 +1,22 @@
+seed: 42
+num_classes: 7
+
+data:
+  stage2_csv: Dataset/combined_stage2_multiclass.csv
+  stage1_train_csv: Dataset/stage1_multiclass_train.csv
+  stage1_val_csv: Dataset/stage1_multiclass_val.csv
+  stage1_test_csv: Dataset/stage1_multiclass_test.csv
+  label_mapping: Dataset/label_mapping_multiclass.json
+
+model:
+  name: random_forest
+  n_estimators: 500
+  max_depth:
+  min_samples_split: 2
+  min_samples_leaf: 1
+  max_features: sqrt
+  class_weight: balanced
+
+output:
+  dir: Stage2/checkpoints/random_forest_multiclass
+  preprocessor_path: Stage2/checkpoints/random_forest_multiclass/preprocessor.joblib

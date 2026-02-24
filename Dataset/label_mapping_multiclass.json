@@ -1,0 +1,22 @@
+{
+  "num_classes": 7,
+  "index_to_class": {
+    "0": "ak",
+    "1": "bcc",
+    "2": "benign_other",
+    "3": "melanoma",
+    "4": "nevus",
+    "5": "scc",
+    "6": "seborrheic_keratosis"
+  },
+  "class_to_index": {
+    "ak": 0,
+    "bcc": 1,
+    "benign_other": 2,
+    "melanoma": 3,
+    "nevus": 4,
+    "scc": 5,
+    "seborrheic_keratosis": 6
+  },
+  "class_names": ["ak", "bcc", "benign_other", "melanoma", "nevus", "scc", "seborrheic_keratosis"]
+}

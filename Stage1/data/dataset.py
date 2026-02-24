@@ -40,13 +40,13 @@ def get_transforms(split, img_size=299):
 
 class SkinLesionDataset(Dataset):
     """
-    Dataset for benign vs malignant skin lesions.
+    Dataset for skin lesions. Supports binary (y / is_malignant) or multiclass (y_class).
     """
 
     def __init__(self, csv_file, data_root="", split="train", img_size=299):
         """
         Args:
-            csv_file (str): path to stage1_{train,val,test}.csv
+            csv_file (str): path to stage1_{train,val,test}.csv or stage1_multiclass_*.csv
             data_root (str): root directory containing image folders
             split (str): train | val | test
             img_size (int): image size (299 for Xception)
@@ -58,13 +58,19 @@ class SkinLesionDataset(Dataset):
         self.split = split
         self.transform = get_transforms(split, img_size)
 
-        # basic sanity checks
+        # Multiclass: use y_class if present
+        if "y_class" in self.data.columns:
+            self.label_col = "y_class"
+            self.multiclass = True
+        else:
+            self.label_col = "y" if "y" in self.data.columns else "is_malignant"
+            self.multiclass = False
+
         self.image_col = "image_path" if "image_path" in self.data.columns else "img_path"
-        self.label_col = "y" if "y" in self.data.columns else "is_malignant"
         if self.image_col not in self.data.columns:
             raise ValueError("Missing image path column: expected 'image_path' or 'img_path'")
         if self.label_col not in self.data.columns:
-            raise ValueError("Missing label column: expected 'y' or 'is_malignant'")
+            raise ValueError(f"Missing label column: expected '{self.label_col}'")
 
     def __len__(self):
         return len(self.data)
@@ -83,7 +89,9 @@ class SkinLesionDataset(Dataset):
         if self.transform:
             image = self.transform(image)
 
-        # float label for BCE loss
-        label = torch.tensor(label, dtype=torch.float32)
+        if self.multiclass:
+            label = torch.tensor(label, dtype=torch.long)
+        else:
+            label = torch.tensor(label, dtype=torch.float32)
 
         return image, label
