@@ -1,6 +1,7 @@
 """
-Load and merge image features with metadata for binary malignant/benign.
+Load and merge image features with metadata for binary or multiclass.
 When preprocessor_path is None, fits TabularPreprocessor on train metadata (Stage 4 standalone).
+Supports label_col 'y' (binary) or 'y_class' (multiclass); drops 'subtype' from features when present.
 """
 from __future__ import annotations
 
@@ -31,6 +32,8 @@ def load_merged_splits(
     stage2 = pd.read_csv(stage2_csv)
     stage2["sample_id"] = stage2["sample_id"].astype(str)
     id_cols_list = list(id_cols)
+    if "subtype" in stage2.columns and "subtype" not in id_cols_list:
+        id_cols_list.append("subtype")
 
     def get_sample_ids_and_features(split: str):
         if split == "train":

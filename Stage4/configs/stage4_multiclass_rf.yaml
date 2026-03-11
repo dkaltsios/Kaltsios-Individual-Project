@@ -1,0 +1,25 @@
+# Stage 4 multiclass: handcrafted image features + metadata -> 7 lesion types
+seed: 42
+num_classes: 7
+img_size: 128
+
+data:
+  data_root: .
+  stage1_train_csv: Dataset/stage1_multiclass_train.csv
+  stage1_val_csv: Dataset/stage1_multiclass_val.csv
+  stage1_test_csv: Dataset/stage1_multiclass_test.csv
+  stage2_csv: Dataset/combined_stage2_multiclass.csv
+  label_col: y_class
+  label_mapping: Dataset/label_mapping_multiclass.json
+
+output:
+  dir: Stage4/checkpoints/stage4_multiclass_rf
+
+model:
+  name: random_forest
+  n_estimators: 500
+  max_depth: null
+  min_samples_split: 2
+  min_samples_leaf: 1
+  max_features: sqrt
+  class_weight: balanced
