@@ -1,0 +1,35 @@
+# Grid search: Pareto features + Softmax Regression
+seed: 42
+num_classes: 7
+img_size: 128
+feature_extractor: pareto
+
+feature_selection:
+  keep_percent: 20
+
+data:
+  data_root: .
+  stage1_train_csv: Dataset/stage1_multiclass_train.csv
+  stage1_val_csv: Dataset/stage1_multiclass_val.csv
+  stage1_test_csv: Dataset/stage1_multiclass_test.csv
+  stage2_csv: Dataset/combined_stage2_multiclass.csv
+  label_col: y_class
+  label_mapping: Dataset/label_mapping_multiclass.json
+
+output:
+  dir: Stage4/checkpoints/stage4_multiclass_pareto_softmax
+
+model:
+  name: softmax_regression
+  base:
+    max_iter: 2000
+    class_weight: balanced
+
+  param_grid:
+    C: [0.001, 0.01, 0.1, 1.0, 10.0]
+    solver: [lbfgs, saga]
+    penalty: [l2]
+
+cv:
+  n_splits: 5
+  metric: f1_macro

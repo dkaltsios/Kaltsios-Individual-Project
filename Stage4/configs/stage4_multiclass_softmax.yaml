@@ -1,4 +1,4 @@
-# Stage 4 multiclass: handcrafted image features + metadata -> 7 lesion types
+# Stage 4 multiclass: 13 image features + metadata -> softmax regression -> 7 lesion types
 seed: 42
 num_classes: 7
 img_size: 128
@@ -13,13 +13,12 @@ data:
   label_mapping: Dataset/label_mapping_multiclass.json
 
 output:
-  dir: Stage4/checkpoints/stage4_multiclass_rf
+  dir: Stage4/checkpoints/stage4_multiclass_softmax
 
 model:
-  name: random_forest
-  n_estimators: 500
-  max_depth: null
-  min_samples_split: 2
-  min_samples_leaf: 1
-  max_features: sqrt
+  name: softmax_regression
+  solver: lbfgs
+  C: 1.0
+  penalty: l2
   class_weight: balanced
+  max_iter: 1000

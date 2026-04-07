@@ -104,20 +104,34 @@ def evaluate_multiclass(y_true: np.ndarray, y_prob: np.ndarray, num_classes: int
     return y_true, y_prob, y_pred, metrics
 
 
-def split_stage2_by_stage1(stage2_df, stage1_test_csv):
-    test_ids = set(pd.read_csv(stage1_test_csv)["sample_id"].astype(str))
+def split_stage2_by_stage1(stage2_df, stage1_split_csv):
+    """Rows follow stage1 CSV sample_id order (test or val; aligns with Stage1 eval)."""
+    order = pd.read_csv(stage1_split_csv)["sample_id"].astype(str).tolist()
+    id_set = set(order)
 
     stage2_df = stage2_df.copy()
     stage2_df["sample_id"] = stage2_df["sample_id"].astype(str)
 
-    test_df = stage2_df[stage2_df["sample_id"].isin(test_ids)].reset_index(drop=True)
-    return test_df
+    sub = stage2_df[stage2_df["sample_id"].isin(id_set)]
+    by_id = sub.set_index("sample_id")
+    missing = [sid for sid in order if sid not in by_id.index]
+    if missing:
+        raise ValueError(
+            f"{len(missing)} stage1 sample_ids missing from stage2 CSV (e.g. {missing[:3]})"
+        )
+    return by_id.loc[order].reset_index()
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to YAML config")
     parser.add_argument("--ckpt", required=True, help="Path to model checkpoint")
+    parser.add_argument(
+        "--split",
+        choices=("test", "val"),
+        default="test",
+        help="Evaluate on test or val (writes test_* or val_* prediction files).",
+    )
     args = parser.parse_args()
 
     try:
@@ -129,7 +143,12 @@ def main():
 
     data_cfg = cfg["data"]
     stage2_csv = Path(data_cfg["stage2_csv"])
-    stage1_test_csv = Path(data_cfg["stage1_test_csv"])
+    if args.split == "val":
+        if "stage1_val_csv" not in data_cfg:
+            raise SystemExit("val split requires data.stage1_val_csv in the YAML config.")
+        stage1_split_csv = Path(data_cfg["stage1_val_csv"])
+    else:
+        stage1_split_csv = Path(data_cfg["stage1_test_csv"])
     num_classes = int(cfg.get("num_classes", 7))
     label_mapping_path = data_cfg.get("label_mapping")
 
@@ -137,29 +156,29 @@ def main():
     label_col = "y_class" if "y_class" in stage2_df.columns else ("y" if "y" in stage2_df.columns else "is_malignant")
     multiclass = label_col == "y_class"
 
-    test_df = split_stage2_by_stage1(stage2_df, stage1_test_csv)
+    eval_df = split_stage2_by_stage1(stage2_df, stage1_split_csv)
 
     out_dir = Path(cfg["output"]["dir"])
     preprocessor_path = Path(cfg["output"].get("preprocessor_path", out_dir / "preprocessor.joblib"))
     preprocessor = TabularPreprocessor.load(preprocessor_path)
 
-    X_test = preprocessor.transform(test_df)
-    y_test = test_df[label_col].astype(int).to_numpy()
+    X_eval = preprocessor.transform(eval_df)
+    y_eval = eval_df[label_col].astype(int).to_numpy()
 
     model_name = cfg["model"].get("name", "xgboost")
 
     if model_name == "xgboost":
         booster = xgb.Booster()
         booster.load_model(args.ckpt)
-        dtest = xgb.DMatrix(X_test)
-        y_prob = booster.predict(dtest)
+        dmat = xgb.DMatrix(X_eval)
+        y_prob = booster.predict(dmat)
         if multiclass and isinstance(y_prob, np.ndarray) and y_prob.ndim == 2:
             pass  # (n, num_class)
         elif not multiclass:
             y_prob = y_prob  # 1-d
     elif model_name == "random_forest":
         model = load(args.ckpt)
-        y_prob = model.predict_proba(X_test)
+        y_prob = model.predict_proba(X_eval)
         if not multiclass:
             y_prob = y_prob[:, 1]
     else:
@@ -174,7 +193,7 @@ def main():
         if class_names is None:
             class_names = [str(i) for i in range(num_classes)]
         y_true, y_prob, y_pred, metrics = evaluate_multiclass(
-            y_test, y_prob, num_classes, class_names
+            y_eval, y_prob, num_classes, class_names
         )
         def _to_json_safe(obj):
             if isinstance(obj, dict):
@@ -188,6 +207,7 @@ def main():
         pred_names = [class_names[int(p)] for p in y_pred]
         true_names = [class_names[int(t)] for t in y_true]
         preds_df = pd.DataFrame({
+            "sample_id": eval_df["sample_id"].astype(str).values,
             "y_true": y_true,
             "y_pred": y_pred,
             "true_class": true_names,
@@ -196,15 +216,23 @@ def main():
         for c, name in enumerate(class_names):
             preds_df[f"prob_{name}"] = y_prob[:, c]
     else:
-        y_true, y_prob, y_pred, metrics = evaluate_probs(y_test, y_prob)
+        y_true, y_prob, y_pred, metrics = evaluate_probs(y_eval, y_prob)
         metrics_save = metrics
-        preds_df = pd.DataFrame({"y_true": y_true, "y_prob": y_prob, "y_pred": y_pred})
+        preds_df = pd.DataFrame(
+            {
+                "sample_id": eval_df["sample_id"].astype(str).values,
+                "y_true": y_true,
+                "y_prob": y_prob,
+                "y_pred": y_pred,
+            }
+        )
 
     print(metrics_save)
 
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / "test_metrics.json").write_text(json.dumps(metrics_save, indent=2))
-    preds_df.to_csv(out_dir / "test_predictions.csv", index=False)
+    out_prefix = "val" if args.split == "val" else "test"
+    (out_dir / f"{out_prefix}_metrics.json").write_text(json.dumps(metrics_save, indent=2))
+    preds_df.to_csv(out_dir / f"{out_prefix}_predictions.csv", index=False)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,24 @@
+# Stage 5 multiclass: Stage4 merged features -> k-means clustering
+seed: 42
+num_classes: 7
+img_size: 128
+feature_extractor: 13feat
+
+data:
+  data_root: .
+  stage1_train_csv: Dataset/stage1_multiclass_train.csv
+  stage1_val_csv: Dataset/stage1_multiclass_val.csv
+  stage1_test_csv: Dataset/stage1_multiclass_test.csv
+  stage2_csv: Dataset/combined_stage2_multiclass.csv
+  label_col: y_class
+  label_mapping: Dataset/label_mapping_multiclass.json
+
+output:
+  dir: Stage5/checkpoints/stage5_multiclass_kmeans
+
+model:
+  name: kmeans
+  n_clusters: 7
+  n_init: 20
+  max_iter: 300
+  fit_on: train

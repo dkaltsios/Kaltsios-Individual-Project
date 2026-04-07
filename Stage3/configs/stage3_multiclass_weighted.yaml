@@ -1,0 +1,23 @@
+# Weighted linear pool: point to Stage1 and Stage2 test_predictions.csv after eval.
+# Example CLI:
+#   python Stage3/fuse.py --stage1_preds Stage1/checkpoints/efficientnet_b0_multiclass/test_predictions.csv \
+#     --stage2_preds Stage2/checkpoints/xgboost_multiclass/test_predictions.csv \
+#     --out_dir Stage3/checkpoints/weighted_pool --w 0.5 \
+#     --label_mapping Dataset/label_mapping_multiclass.json
+#
+# Tune w on validation (requires val_predictions.csv from both stages):
+#   python Stage3/fuse.py ... --val_stage1_preds ... --val_stage2_preds ... --out_dir ...
+#
+# Logistic-regression stacking (multiclass) using val predictions:
+#   python Stage3/fuse.py --method stacking_lr \
+#     --stage1_preds Stage1/checkpoints/efficientnet_b0_multiclass/test_predictions.csv \
+#     --stage2_preds Stage2/checkpoints/xgboost_multiclass/test_predictions.csv \
+#     --val_stage1_preds Stage1/checkpoints/efficientnet_b0_multiclass/val_predictions.csv \
+#     --val_stage2_preds Stage2/checkpoints/xgboost_multiclass/val_predictions.csv \
+#     --out_dir Stage3/checkpoints/stacking_lr --label_mapping Dataset/label_mapping_multiclass.json
+
+stage1_preds: Stage1/checkpoints/efficientnet_b0_multiclass/test_predictions.csv
+stage2_preds: Stage2/checkpoints/xgboost_multiclass/test_predictions.csv
+out_dir: Stage3/checkpoints/weighted_pool
+w: 0.5
+label_mapping: Dataset/label_mapping_multiclass.json

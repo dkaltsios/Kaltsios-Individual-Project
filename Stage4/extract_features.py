@@ -1,7 +1,10 @@
 """
-Extract handcrafted image features (no CNN) for each sample.
-Reads train/val/test CSVs, loads images, computes color + texture features, saves NPZ.
-Stage 4 is standalone: no Stage 1 or Stage 2 required.
+Extract handcrafted image features for each sample.
+Reads train/val/test CSVs, loads images, computes features, saves NPZ.
+
+Supports two feature extractors via config key ``feature_extractor``:
+  - "13feat" (default): 13-feature vector (GLCM/Gabor/HOG/Color/LBP scalars)
+  - "pareto": comprehensive 2031-feature vector for Pareto-based selection
 """
 from __future__ import annotations
 
@@ -16,7 +19,17 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from Stage4.data.image_features import extract_features_from_path
+
+def _get_extractor(name: str):
+    if name == "13feat":
+        from Stage4.data.image_features import extract_features_from_path
+    elif name == "pareto":
+        from Stage4.data.image_features_pareto import extract_features_from_path
+    else:
+        raise ValueError(
+            f"Unknown feature_extractor: {name!r}. Choose '13feat' or 'pareto'."
+        )
+    return extract_features_from_path
 
 
 def main():
@@ -26,6 +39,10 @@ def main():
 
     import yaml
     cfg = yaml.safe_load(Path(args.config).read_text())
+
+    extractor_name = cfg.get("feature_extractor", "13feat")
+    extract_features_from_path = _get_extractor(extractor_name)
+    print(f"Feature extractor: {extractor_name}")
 
     data_cfg = cfg["data"]
     data_root = Path(data_cfg.get("data_root", "."))

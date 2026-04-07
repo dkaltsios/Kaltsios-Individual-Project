@@ -147,6 +147,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to YAML config")
     parser.add_argument("--ckpt", required=True, help="Path to model checkpoint")
+    parser.add_argument(
+        "--split",
+        choices=("test", "val"),
+        default="test",
+        help="Evaluate on test or val CSV from config (writes test_* or val_* prediction files).",
+    )
     args = parser.parse_args()
 
     try:
@@ -159,7 +165,13 @@ def main():
     device = get_device()
 
     data_cfg = cfg["data"]
-    test_csv = Path(data_cfg.get("test_csv", "Dataset/stage1_test.csv"))
+    if args.split == "val":
+        val_path = data_cfg.get("val_csv")
+        if not val_path:
+            raise SystemExit("val split requires data.val_csv in the YAML config.")
+        split_csv = Path(val_path)
+    else:
+        split_csv = Path(data_cfg.get("test_csv", "Dataset/stage1_test.csv"))
     data_root = data_cfg.get("data_root", "")
     num_classes = int(cfg.get("num_classes", 1))
     label_mapping_path = data_cfg.get("label_mapping")
@@ -168,9 +180,10 @@ def main():
     batch_size = int(cfg.get("batch_size", 16))
     num_workers = int(cfg.get("num_workers", 0))
 
-    test_ds = SkinLesionDataset(test_csv, data_root=data_root, split="test", img_size=img_size)
-    test_loader = DataLoader(
-        test_ds,
+    ds_split = "val" if args.split == "val" else "test"
+    eval_ds = SkinLesionDataset(split_csv, data_root=data_root, split=ds_split, img_size=img_size)
+    eval_loader = DataLoader(
+        eval_ds,
         batch_size=batch_size,
         shuffle=False,
         num_workers=num_workers,
@@ -191,7 +204,7 @@ def main():
         if class_names is None:
             class_names = [str(i) for i in range(num_classes)]
         y_true, y_prob, y_pred, metrics = evaluate_multiclass(
-            model, test_loader, device, num_classes, class_names
+            model, eval_loader, device, num_classes, class_names
         )
         # JSON-safe metrics (replace nan with None)
         def _to_json_safe(obj):
@@ -204,19 +217,23 @@ def main():
             return obj
         metrics_save = _to_json_safe(metrics)
     else:
-        y_true, y_prob, y_pred, metrics = evaluate_binary(model, test_loader, device)
+        y_true, y_prob, y_pred, metrics = evaluate_binary(model, eval_loader, device)
         metrics_save = metrics
 
     print(metrics_save)
 
     out_dir = Path(cfg["output"]["dir"])
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / "test_metrics.json").write_text(json.dumps(metrics_save, indent=2))
+    out_prefix = "val" if args.split == "val" else "test"
+    (out_dir / f"{out_prefix}_metrics.json").write_text(json.dumps(metrics_save, indent=2))
+
+    sample_ids = eval_ds.data["sample_id"].astype(str).to_numpy()
 
     if num_classes > 1 and class_names:
         pred_names = [class_names[int(p)] for p in y_pred]
         true_names = [class_names[int(t)] for t in y_true]
         preds_df = pd.DataFrame({
+            "sample_id": sample_ids,
             "y_true": y_true,
             "y_pred": y_pred,
             "true_class": true_names,
@@ -225,8 +242,10 @@ def main():
         for c, name in enumerate(class_names):
             preds_df[f"prob_{name}"] = y_prob[:, c]
     else:
-        preds_df = pd.DataFrame({"y_true": y_true, "y_prob": y_prob, "y_pred": y_pred})
-    preds_df.to_csv(out_dir / "test_predictions.csv", index=False)
+        preds_df = pd.DataFrame(
+            {"sample_id": sample_ids, "y_true": y_true, "y_prob": y_prob, "y_pred": y_pred}
+        )
+    preds_df.to_csv(out_dir / f"{out_prefix}_predictions.csv", index=False)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,28 @@
+# Stage 4 multiclass (Pareto): 118 features -> top 20% selection -> softmax regression -> 7 lesion types
+seed: 42
+num_classes: 7
+img_size: 128
+feature_extractor: pareto
+
+feature_selection:
+  keep_percent: 20
+
+data:
+  data_root: .
+  stage1_train_csv: Dataset/stage1_multiclass_train.csv
+  stage1_val_csv: Dataset/stage1_multiclass_val.csv
+  stage1_test_csv: Dataset/stage1_multiclass_test.csv
+  stage2_csv: Dataset/combined_stage2_multiclass.csv
+  label_col: y_class
+  label_mapping: Dataset/label_mapping_multiclass.json
+
+output:
+  dir: Stage4/checkpoints/stage4_multiclass_pareto_softmax
+
+model:
+  name: softmax_regression
+  solver: lbfgs
+  C: 1.0
+  penalty: l2
+  class_weight: balanced
+  max_iter: 1000

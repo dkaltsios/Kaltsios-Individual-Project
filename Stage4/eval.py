@@ -86,6 +86,16 @@ def main():
     if multiclass and num_classes < 2:
         num_classes = 7
 
+    feature_sel_path = out_dir / "feature_selection.json"
+    image_feature_indices = None
+    if feature_sel_path.exists():
+        sel = json.loads(feature_sel_path.read_text())
+        image_feature_indices = sel["selected_indices"]
+        print(
+            f"Feature selection active: using {sel['n_selected']}/{sel['n_total']} "
+            f"image features ({sel['keep_percent']}%)"
+        )
+
     _, _, _, _, X_test, y_test, _ = load_merged_splits(
         features_dir=features_dir,
         stage2_csv=Path(data_cfg["stage2_csv"]),
@@ -94,6 +104,7 @@ def main():
         stage1_test_csv=Path(data_cfg["stage1_test_csv"]),
         preprocessor_path=preprocessor_path,
         label_col=label_col,
+        image_feature_indices=image_feature_indices,
     )
 
     model_name = cfg["model"].get("name", "xgboost")
@@ -105,7 +116,11 @@ def main():
         y_prob = booster.predict(xgb.DMatrix(X_test))
         if not multiclass and isinstance(y_prob, np.ndarray) and y_prob.ndim == 2:
             y_prob = y_prob[:, 1]
-    elif model_name == "random_forest":
+    elif model_name in ("softmax_regression", "naive_bayes"):
+        scaler_path = out_dir / "scaler.joblib"
+        if scaler_path.exists():
+            scaler = load(scaler_path)
+            X_test = scaler.transform(X_test)
         model = load(ckpt)
         y_prob = model.predict_proba(X_test)
         if not multiclass:

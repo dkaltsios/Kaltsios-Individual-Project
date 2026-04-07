@@ -1,8 +1,10 @@
 numpy
 pandas
 Pillow
+scipy
 scikit-learn
 scikit-image>=0.19
+PyWavelets
 xgboost
 joblib
 PyYAML

@@ -12,7 +12,9 @@ import sys
 import numpy as np
 import xgboost as xgb
 from joblib import dump
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import (
     accuracy_score,
     average_precision_score,
@@ -76,6 +78,16 @@ def main():
     if multiclass and num_classes < 2:
         num_classes = 7
 
+    feature_sel_path = out_dir / "feature_selection.json"
+    image_feature_indices = None
+    if feature_sel_path.exists():
+        sel = json.loads(feature_sel_path.read_text())
+        image_feature_indices = sel["selected_indices"]
+        print(
+            f"Feature selection active: using {sel['n_selected']}/{sel['n_total']} "
+            f"image features ({sel['keep_percent']}%)"
+        )
+
     X_train, y_train, X_val, y_val, X_test, y_test, preprocessor = load_merged_splits(
         features_dir=features_dir,
         stage2_csv=Path(data_cfg["stage2_csv"]),
@@ -84,6 +96,7 @@ def main():
         stage1_test_csv=Path(data_cfg["stage1_test_csv"]),
         preprocessor_path=preprocessor_path,
         label_col=label_col,
+        image_feature_indices=image_feature_indices,
     )
     if preprocessor_path is None or not Path(preprocessor_path).exists():
         preprocessor.save(out_dir / "preprocessor.joblib")
@@ -153,20 +166,35 @@ def main():
         y_val_prob = model.predict_proba(X_val)
         if not multiclass:
             y_val_prob = y_val_prob[:, 1]
-    elif model_name == "random_forest":
-        model = RandomForestClassifier(
-            n_estimators=int(model_cfg.get("n_estimators", 500)),
-            max_depth=model_cfg.get("max_depth"),
-            min_samples_split=int(model_cfg.get("min_samples_split", 2)),
-            min_samples_leaf=int(model_cfg.get("min_samples_leaf", 1)),
-            max_features=model_cfg.get("max_features", "sqrt"),
+    elif model_name == "softmax_regression":
+        scaler = StandardScaler()
+        X_train_sc = scaler.fit_transform(X_train)
+        X_val_sc = scaler.transform(X_val)
+        dump(scaler, out_dir / "scaler.joblib")
+        model = LogisticRegression(
+            solver=model_cfg.get("solver", "lbfgs"),
+            C=float(model_cfg.get("C", 1.0)),
+            penalty=model_cfg.get("penalty", "l2"),
             class_weight=model_cfg.get("class_weight", "balanced"),
+            max_iter=int(model_cfg.get("max_iter", 1000)),
             random_state=seed,
-            n_jobs=-1,
         )
-        model.fit(X_train, y_train)
+        model.fit(X_train_sc, y_train)
         dump(model, out_dir / "best.joblib")
-        y_val_prob = model.predict_proba(X_val)
+        y_val_prob = model.predict_proba(X_val_sc)
+        if not multiclass:
+            y_val_prob = y_val_prob[:, 1]
+    elif model_name == "naive_bayes":
+        scaler = StandardScaler()
+        X_train_sc = scaler.fit_transform(X_train)
+        X_val_sc = scaler.transform(X_val)
+        dump(scaler, out_dir / "scaler.joblib")
+        model = GaussianNB(
+            var_smoothing=float(model_cfg.get("var_smoothing", 1e-9)),
+        )
+        model.fit(X_train_sc, y_train)
+        dump(model, out_dir / "best.joblib")
+        y_val_prob = model.predict_proba(X_val_sc)
         if not multiclass:
             y_val_prob = y_val_prob[:, 1]
     else:
