@@ -22,7 +22,7 @@ def load_merged_splits(
     stage1_test_csv: Path,
     preprocessor_path: Union[Path, None] = None,
     label_col: str = "y",
-    id_cols: Tuple[str, ...] = ("sample_id", "dataset_id", "patient_global"),
+    id_cols: Tuple[str, ...] = ("sample_id", "dataset_id", "patient_global", "y", "y_class"),
     image_feature_indices: Union[list, None] = None,
     drop_columns_contains: Tuple[str, ...] = (),
     return_feature_names: bool = False,

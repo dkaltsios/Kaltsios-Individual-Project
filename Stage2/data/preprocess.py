@@ -30,7 +30,10 @@ class TabularPreprocessor:
         self.artifacts: PreprocessorArtifacts | None = None
 
     def _infer_columns(self, df: pd.DataFrame, label_col: str, id_cols: Iterable[str]):
-        drop_cols = set(id_cols) | {label_col}
+        # Always exclude both target columns from candidate features.
+        # This prevents multiclass runs (label_col=y_class) from leaking the binary
+        # target "y", and vice-versa if both labels exist in a CSV.
+        drop_cols = set(id_cols) | {label_col, "y", "y_class"}
         candidates = [c for c in df.columns if c not in drop_cols]
 
         if self._categorical_cols is None or self._numeric_cols is None:

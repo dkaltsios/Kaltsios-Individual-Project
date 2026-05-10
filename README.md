@@ -1,12 +1,13 @@
 # Kaltsios Individual Project
 
-Multimodal skin lesion classification and analysis pipeline with 5 stages:
+Multimodal skin lesion classification and analysis pipeline: five training stages plus a Streamlit demo.
 
 - `Stage1`: image models (EfficientNet/ResNet) for multiclass classification
 - `Stage2`: metadata models (XGBoost / Random Forest)
 - `Stage3`: late fusion of Stage1 + Stage2 predictions
 - `Stage4`: early fusion (image handcrafted features + metadata)
 - `Stage5`: unsupervised clustering baseline on Stage4-style merged features
+- `demo/`: Streamlit app for interactive inference (CNN, metadata, late/early fusion, Grad-CAM, optional SHAP)
 
 ## Project Structure
 
@@ -16,6 +17,8 @@ Multimodal skin lesion classification and analysis pipeline with 5 stages:
 - `Stage3/`: fusion script (`weighted_pool` or `stacking_lr`)
 - `Stage4/`: feature extraction, early-fusion training/eval, feature selection, CV/grid search
 - `Stage5/`: KMeans clustering train/eval on merged features
+- `demo/`: Streamlit UI (`app.py`), inference helpers (`predict.py`), clinical-text parsing (`parse_metadata.py`), sample cases (`demo_clinical_cases.xlsx`)
+- `demo_notebook.ipynb`: optional notebook walkthrough
 
 ## Stage 1 (Image Models)
 
@@ -118,6 +121,44 @@ Target labels (`y_class`) are excluded from model inputs and used only for evalu
 - `v_measure`
 - `purity`
 - `mapped_accuracy` (cluster IDs mapped to labels using Hungarian matching)
+
+## Demo (Streamlit)
+
+Interactive demo: upload a lesion image, enter or paste clinical text (or use `demo/demo_clinical_cases.xlsx`), and compare **Stage 1–4** predictions with **Grad-CAM** (image) and **SHAP** (metadata) explainability. Late fusion supports **weighted pool** and **stacking** (logistic regression) where checkpoints exist.
+
+### Run
+
+From the **repository root**:
+
+`streamlit run demo/app.py`
+
+### Dependencies
+
+Install the packages for the stages you trained (see `Stage1/requirements.txt`, `Stage2/requirements.txt`, and Stage 4 tooling as needed), plus:
+
+`pip install streamlit shap matplotlib openai`
+
+(`openai` is only required if you enable the GPT-backed clinical parser; see below.)
+
+### Checkpoints
+
+The app loads weights from the same paths used in training output directories, for example:
+
+- `Stage1/checkpoints/…/best.pt` (CNN options listed in the UI)
+- `Stage2/checkpoints/…/best.json` or `best.joblib` plus `preprocessor.joblib`
+- `Stage3/checkpoints/stacking_lr/stacker.joblib` (for stacking late fusion)
+- `Stage4/checkpoints/<run_name>/` (early fusion: `best.json` or `best.joblib`, preprocessor, optional scaler / feature selection)
+
+Train or copy checkpoints into these locations before running the demo. (Large checkpoint files are typically gitignored.)
+
+### Optional: GPT clinical text parsing
+
+Free-text clinical notes can be parsed with **GPT-4o-mini** when `OPENAI_API_KEY` is set (environment variable, `demo/.env`, or Streamlit secrets). If the key is missing, the app falls back to a **regex-based parser**.
+
+### Regenerate sample spreadsheet (optional)
+
+`python3 demo/scripts/build_demo_clinical_cases_xlsx.py`  
+(writes/updates `demo/demo_clinical_cases.xlsx` according to that script’s rules.)
 
 ## Common Outputs
 

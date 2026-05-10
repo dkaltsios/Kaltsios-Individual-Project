@@ -217,20 +217,56 @@ def main():
     val_csv = Path(data_cfg["val_csv"])
     data_root = data_cfg.get("data_root", "")
 
-    img_size = int(cfg.get("img_size", 224))
-    batch_size = int(cfg.get("batch_size", 16))
+    img_size    = int(cfg.get("img_size", 224))
+    batch_size  = int(cfg.get("batch_size", 16))
     num_workers = int(cfg.get("num_workers", 0))
+    augment              = bool(cfg.get("augment", False))
+    use_weighted_sampler = bool(cfg.get("use_weighted_sampler", False))
+    # sampler_power=1.0 → hard balance (1/count)
+    # sampler_power=0.5 → soft balance (1/√count)
+    sampler_power        = float(cfg.get("sampler_power", 1.0))
 
-    train_ds = SkinLesionDataset(train_csv, data_root=data_root, split="train", img_size=img_size)
-    val_ds = SkinLesionDataset(val_csv, data_root=data_root, split="val", img_size=img_size)
-
-    train_loader = DataLoader(
-        train_ds,
-        batch_size=batch_size,
-        shuffle=True,
-        num_workers=num_workers,
-        pin_memory=False,
+    # Read train CSV early so we can build the weighted sampler if needed
+    train_df_raw = pd.read_csv(train_csv)
+    label_col_raw = (
+        "y_class" if "y_class" in train_df_raw.columns
+        else ("y" if "y" in train_df_raw.columns else "is_malignant")
     )
+
+    train_ds = SkinLesionDataset(train_csv, data_root=data_root, split="train",
+                                 img_size=img_size, augment=augment)
+    val_ds   = SkinLesionDataset(val_csv,   data_root=data_root, split="val",
+                                 img_size=img_size, augment=False)
+
+    if use_weighted_sampler:
+        num_cls   = int(cfg.get("num_classes", 7))
+        counts    = (
+            train_df_raw[label_col_raw]
+            .value_counts()
+            .reindex(range(num_cls), fill_value=1)
+            .astype(float)
+        )
+        cls_w    = 1.0 / (counts ** sampler_power)
+        sample_w = train_df_raw[label_col_raw].map(cls_w).to_numpy(dtype=float)
+        sampler  = torch.utils.data.WeightedRandomSampler(
+            weights=sample_w, num_samples=len(sample_w), replacement=True
+        )
+        train_loader = DataLoader(
+            train_ds,
+            batch_size=batch_size,
+            sampler=sampler,
+            num_workers=num_workers,
+            pin_memory=False,
+        )
+    else:
+        train_loader = DataLoader(
+            train_ds,
+            batch_size=batch_size,
+            shuffle=True,
+            num_workers=num_workers,
+            pin_memory=False,
+        )
+
     val_loader = DataLoader(
         val_ds,
         batch_size=batch_size,
@@ -273,6 +309,15 @@ def main():
         weight_decay=float(cfg.get("weight_decay", 1e-4)),
     )
 
+    num_epochs = int(cfg.get("epochs", 10))
+    scheduler_name = cfg.get("scheduler", None)
+    if scheduler_name == "cosine":
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+            optimizer, T_max=num_epochs, eta_min=1e-6
+        )
+    else:
+        scheduler = None
+
     out_dir = Path(cfg["output"]["dir"])
     out_dir.mkdir(parents=True, exist_ok=True)
     if multiclass and label_mapping_path:
@@ -282,7 +327,7 @@ def main():
     best_metric = -1.0
     history = []
 
-    for epoch in range(1, int(cfg.get("epochs", 10)) + 1):
+    for epoch in range(1, num_epochs + 1):
         train_loss = train_one_epoch(model, train_loader, criterion, optimizer, device, multiclass=multiclass)
         if multiclass:
             _, _, val_metrics = evaluate_multiclass(
@@ -303,20 +348,25 @@ def main():
             }
         )
 
+        if scheduler is not None:
+            scheduler.step()
+
         if current > best_metric:
             best_metric = current
             torch.save(model.state_dict(), out_dir / "best.pt")
 
+        current_lr = optimizer.param_groups[0]["lr"]
         if multiclass:
             print(
                 f"Epoch {epoch}: train_loss={train_loss:.4f} "
                 f"val_acc={val_metrics['acc']:.4f} val_f1_macro={val_metrics['f1_macro']:.4f} "
-                f"val_pr_auc_macro={val_metrics['pr_auc_macro']:.4f}"
+                f"val_pr_auc_macro={val_metrics['pr_auc_macro']:.4f} lr={current_lr:.2e}"
             )
         else:
             print(
                 f"Epoch {epoch}: train_loss={train_loss:.4f} "
-                f"val_acc={val_metrics['acc']:.4f} val_auc={val_metrics['auc']:.4f} val_pr_auc={val_metrics['pr_auc']:.4f}"
+                f"val_acc={val_metrics['acc']:.4f} val_auc={val_metrics['auc']:.4f} "
+                f"val_pr_auc={val_metrics['pr_auc']:.4f} lr={current_lr:.2e}"
             )
 
     (out_dir / "history.json").write_text(

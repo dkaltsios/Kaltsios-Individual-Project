@@ -1,0 +1,27 @@
+seed: 42
+epochs: 30
+batch_size: 16
+lr: 0.0003
+weight_decay: 0.0001
+img_size: 224
+num_workers: 0
+num_classes: 7
+
+augment: true
+use_weighted_sampler: true
+sampler_power: 0.5          # soft balance: 1/sqrt(count) instead of 1/count
+scheduler: cosine           # CosineAnnealingLR from lr=0.0003 to eta_min=1e-6
+
+data:
+  train_csv: Dataset/stage1_multiclass_train.csv
+  val_csv: Dataset/stage1_multiclass_val.csv
+  test_csv: Dataset/stage1_multiclass_test.csv
+  data_root: .
+  label_mapping: Dataset/label_mapping_multiclass.json
+
+model:
+  name: resnet50
+  pretrained: true
+
+output:
+  dir: Stage1/checkpoints/resnet50_multiclass_aug_v2

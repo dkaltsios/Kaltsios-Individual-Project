@@ -1,16 +1,16 @@
 """
-Cross-validation for Stage 1 EfficientNet (multiclass).
+Cross-validation for Stage 1 image models (multiclass).
 
 Uses StratifiedGroupKFold on train+val samples (grouped by patient_global),
 keeping the existing test set untouched.
 
 For each fold:
 - Builds train/val subsets from a combined stage1_multiclass train+val CSV
-- Trains EfficientNet with the same hyperparameters as efficientnet_b0_multiclass.yaml
+- Trains the model from the given YAML (e.g. EfficientNet or ResNet)
 - Evaluates multiclass metrics on the fold's validation split
 
 Writes a JSON summary with per-fold and mean metrics to:
-Stage1/cv_results/efficientnet_b0_multiclass_cv.json
+Stage1/cv_results/<config_stem>_cv.json (e.g. efficientnet_b0_multiclass_cv.json)
 """
 from __future__ import annotations
 
@@ -202,9 +202,9 @@ def main():
 
     out_dir = PROJECT_ROOT / "Stage1" / "cv_results"
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "efficientnet_b0_multiclass_cv.json"
+    out_path = out_dir / f"{Path(args.config).stem}_cv.json"
     out_path.write_text(json.dumps(summary, indent=2))
-    print(f"\nSaved EfficientNet CV summary to {out_path}")
+    print(f"\nSaved Stage 1 CV summary to {out_path}")
 
 
 if __name__ == "__main__":

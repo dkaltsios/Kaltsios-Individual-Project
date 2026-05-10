@@ -11,26 +11,48 @@ IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD  = [0.229, 0.224, 0.225]
 
 
-def get_transforms(split, img_size=299):
+def get_transforms(split, img_size=299, augment=False):
     """
-    Paper-style transforms.
-    Xception expects 299x299.
+    Return a transform pipeline for the given split.
+
+    augment=False  →  original baseline augmentation (preserves existing results).
+    augment=True   →  stronger augmentation:
+                       • RandomResizedCrop (scale 0.85–1.0) instead of plain Resize
+                       • Stronger ColorJitter (brightness/contrast 0.4, saturation 0.3, hue 0.05)
+                       • RandomErasing (p=0.5, 2–15 % area) after ToTensor
     """
     if split == "train":
-        return transforms.Compose([
-            transforms.Resize((img_size, img_size)),
-            transforms.RandomHorizontalFlip(),
-            transforms.RandomVerticalFlip(),
-            transforms.RandomRotation(180),
-            transforms.ColorJitter(
-                brightness=0.2,
-                contrast=0.2,
-                saturation=0.2
-            ),
-            transforms.ToTensor(),
-            transforms.Normalize(IMAGENET_MEAN, IMAGENET_STD),
-        ])
-    else:  # val / test
+        if augment:
+            return transforms.Compose([
+                transforms.RandomResizedCrop(img_size, scale=(0.85, 1.0)),
+                transforms.RandomHorizontalFlip(),
+                transforms.RandomVerticalFlip(),
+                transforms.RandomRotation(180),
+                transforms.ColorJitter(
+                    brightness=0.4,
+                    contrast=0.4,
+                    saturation=0.3,
+                    hue=0.05,
+                ),
+                transforms.ToTensor(),
+                transforms.Normalize(IMAGENET_MEAN, IMAGENET_STD),
+                transforms.RandomErasing(p=0.5, scale=(0.02, 0.15)),
+            ])
+        else:
+            return transforms.Compose([
+                transforms.Resize((img_size, img_size)),
+                transforms.RandomHorizontalFlip(),
+                transforms.RandomVerticalFlip(),
+                transforms.RandomRotation(180),
+                transforms.ColorJitter(
+                    brightness=0.2,
+                    contrast=0.2,
+                    saturation=0.2,
+                ),
+                transforms.ToTensor(),
+                transforms.Normalize(IMAGENET_MEAN, IMAGENET_STD),
+            ])
+    else:  # val / test — never augmented
         return transforms.Compose([
             transforms.Resize((img_size, img_size)),
             transforms.ToTensor(),
@@ -43,7 +65,7 @@ class SkinLesionDataset(Dataset):
     Dataset for skin lesions. Supports binary (y / is_malignant) or multiclass (y_class).
     """
 
-    def __init__(self, csv_file, data_root="", split="train", img_size=299):
+    def __init__(self, csv_file, data_root="", split="train", img_size=299, augment=False):
         """
         Args:
             csv_file (str): path to stage1_{train,val,test}.csv or stage1_multiclass_*.csv
@@ -56,7 +78,7 @@ class SkinLesionDataset(Dataset):
         self.data = pd.read_csv(csv_file)
         self.data_root = Path(data_root) if data_root else None
         self.split = split
-        self.transform = get_transforms(split, img_size)
+        self.transform = get_transforms(split, img_size, augment=augment)
 
         # Multiclass: use y_class if present
         if "y_class" in self.data.columns:
