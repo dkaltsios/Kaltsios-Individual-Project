@@ -1,0 +1,42 @@
+# Phase 2: ResNet-50 multiclass fine-tuning from ISIC binary pretraining.
+#
+# Run first:
+#   python -m Stage1.prepare_isic_binary
+#   python -m Stage1.train --config Stage1/configs/isic_binary_pretrain_resnet50.yaml
+#
+# Then train:
+#   python -m Stage1.train --config Stage1/configs/resnet50_isic_binary_to_multiclass.yaml
+#
+# Evaluate:
+#   python Stage1/eval.py --config Stage1/configs/resnet50_isic_binary_to_multiclass.yaml --ckpt Stage1/checkpoints/resnet50_isic_binary_to_multiclass/best.pt --split test
+
+seed: 42
+epochs: 30
+batch_size: 16
+lr: 0.0003
+backbone_lr_factor: 0.1
+weight_decay: 0.0001
+img_size: 224
+num_workers: 0
+num_classes: 7
+
+augment: true
+use_weighted_sampler: true
+sampler_power: 0.5
+scheduler: cosine
+
+phase1_checkpoint: Stage1/checkpoints/isic_binary_pretrain_resnet50/best.pt
+
+data:
+  train_csv: Dataset/stage1_multiclass_train.csv
+  val_csv: Dataset/stage1_multiclass_val.csv
+  test_csv: Dataset/stage1_multiclass_test.csv
+  data_root: .
+  label_mapping: Dataset/label_mapping_multiclass.json
+
+model:
+  name: resnet50
+  pretrained: true
+
+output:
+  dir: Stage1/checkpoints/resnet50_isic_binary_to_multiclass

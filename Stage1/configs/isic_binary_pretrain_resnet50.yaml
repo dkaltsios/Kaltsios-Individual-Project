@@ -1,0 +1,35 @@
+# Supervised Phase 1: ResNet-50 benign/malignant pretraining on ISIC.
+#
+# Prepare CSVs first:
+#   python -m Stage1.prepare_isic_binary
+#
+# Train:
+#   python -m Stage1.train --config Stage1/configs/isic_binary_pretrain_resnet50.yaml
+#
+# Evaluate:
+#   python Stage1/eval.py --config Stage1/configs/isic_binary_pretrain_resnet50.yaml --ckpt Stage1/checkpoints/isic_binary_pretrain_resnet50/best.pt --split val
+
+seed: 42
+epochs: 20
+batch_size: 16
+lr: 0.0003
+weight_decay: 0.0001
+img_size: 224
+num_workers: 0
+num_classes: 1
+
+augment: true
+scheduler: cosine
+
+data:
+  train_csv: Dataset/isic_binary/isic_binary_train.csv
+  val_csv: Dataset/isic_binary/isic_binary_val.csv
+  test_csv: Dataset/isic_binary/isic_binary_val.csv
+  data_root: .
+
+model:
+  name: resnet50
+  pretrained: true
+
+output:
+  dir: Stage1/checkpoints/isic_binary_pretrain_resnet50

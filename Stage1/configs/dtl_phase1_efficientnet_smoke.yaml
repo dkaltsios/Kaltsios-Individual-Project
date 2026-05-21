@@ -1,0 +1,30 @@
+# Fast sanity check / mini Phase 1 — NOT for publication runs.
+# Uses a random subset of ISIC JPEGs and few epochs so you can verify
+# the pipeline or compare rough trends in tens of minutes, not hours.
+#
+#   python3 -m Stage1.dtl_phase1 --config Stage1/configs/dtl_phase1_efficientnet_smoke.yaml
+#
+# Then point phase1_checkpoint at smoke output and run Phase 2 with a
+# duplicate YAML that sets epochs: 5 and a fresh output.dir to compare
+# val curves against ImageNet-only in the same wall-clock budget.
+
+seed: 42
+img_size: 224
+batch_size: 128
+num_workers: 4
+lr: 0.000001
+weight_decay: 0.0001
+epochs: 5
+patience: 3
+scheduler: cosine
+
+model:
+  name: efficientnet_b0
+  pretrained: true
+
+data:
+  image_dir: isic_images
+  max_images: 8000
+
+output:
+  dir: Stage1/checkpoints/dtl_phase1_efficientnet_smoke

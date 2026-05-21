@@ -1,0 +1,26 @@
+# DTL Phase 1 – ResNet-50 domain adaptation
+# Trains the last layers on unlabeled ISIC 2020 dermoscopy images via
+# rotation prediction (proxy task; no labels needed).
+#
+# Run:
+#   python -m Stage1.dtl_phase1 --config Stage1/configs/dtl_phase1_resnet50.yaml
+
+seed: 42
+img_size: 224
+batch_size: 64
+num_workers: 4
+lr: 0.000001       # 1e-6 – low rate for fine-tuning, per DTL paper
+weight_decay: 0.0001
+epochs: 40
+patience: 8
+scheduler: cosine
+
+model:
+  name: resnet50
+  pretrained: true  # start from ImageNet weights
+
+data:
+  image_dir: isic_images  # flat folder of ISIC 2020 JPEGs
+
+output:
+  dir: Stage1/checkpoints/dtl_phase1_resnet50

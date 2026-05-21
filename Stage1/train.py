@@ -282,6 +282,29 @@ def main():
         num_classes=num_classes,
         pretrained=cfg["model"].get("pretrained", True),
     )
+
+    # DTL Phase 2: load domain-adapted weights from Phase 1 if provided.
+    # The Phase 1 checkpoint has a 4-class rotation head; strict=False lets us
+    # load the backbone weights while the task-specific head is re-initialised.
+    phase1_ckpt = cfg.get("phase1_checkpoint", None)
+    if phase1_ckpt:
+        phase1_path = Path(phase1_ckpt)
+        if not phase1_path.exists():
+            raise FileNotFoundError(f"phase1_checkpoint not found: {phase1_path}")
+        state = torch.load(phase1_path, map_location="cpu")
+        # Filter out head weights whose shape doesn't match the current model
+        # (Phase 1 used 4 output classes; Phase 2 uses num_classes)
+        model_state = model.state_dict()
+        filtered = {
+            k: v for k, v in state.items()
+            if k in model_state and v.shape == model_state[k].shape
+        }
+        skipped = [k for k in state if k not in filtered]
+        missing, unexpected = model.load_state_dict(filtered, strict=False)
+        print(f"Loaded Phase 1 backbone weights from {phase1_path}")
+        if skipped:
+            print(f"  Skipped (head/shape mismatch) : {skipped}")
+
     model.to(device)
 
     train_df = pd.read_csv(train_csv)
@@ -303,11 +326,30 @@ def main():
         criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
         class_names = None
 
-    optimizer = torch.optim.AdamW(
-        model.parameters(),
-        lr=float(cfg.get("lr", 3e-4)),
-        weight_decay=float(cfg.get("weight_decay", 1e-4)),
-    )
+    base_lr     = float(cfg.get("lr", 3e-4))
+    weight_decay = float(cfg.get("weight_decay", 1e-4))
+    backbone_lr_factor = float(cfg.get("backbone_lr_factor", 1.0))
+
+    if phase1_ckpt and backbone_lr_factor != 1.0:
+        # Differential learning rates: lower lr for the adapted backbone,
+        # full lr for the freshly initialised task head.
+        head_keywords = ("classifier", "fc")
+        backbone_params = [p for n, p in model.named_parameters()
+                           if not any(k in n for k in head_keywords)]
+        head_params     = [p for n, p in model.named_parameters()
+                           if any(k in n for k in head_keywords)]
+        optimizer = torch.optim.AdamW([
+            {"params": backbone_params, "lr": base_lr * backbone_lr_factor},
+            {"params": head_params,     "lr": base_lr},
+        ], weight_decay=weight_decay)
+        print(f"Differential LR — backbone: {base_lr * backbone_lr_factor:.2e}, "
+              f"head: {base_lr:.2e}")
+    else:
+        optimizer = torch.optim.AdamW(
+            model.parameters(),
+            lr=base_lr,
+            weight_decay=weight_decay,
+        )
 
     num_epochs = int(cfg.get("epochs", 10))
     scheduler_name = cfg.get("scheduler", None)
